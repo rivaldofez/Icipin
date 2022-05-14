@@ -40,12 +40,15 @@ struct HomepageView: View {
                     .offset(x: 0, y: -40)
                 
                 ScrollView(.vertical, showsIndicators: false){
-                    LazyVGrid(columns: columnGrid){
+                    LazyVGrid(columns: columnGrid, spacing: 20){
                         ForEach((0...3), id: \.self) {_ in
-                            ScrollView(.horizontal, showsIndicators: false){
-                                LazyHGrid(rows: rowGrid){
-                                    ForEach((0...3), id: \.self){_ in
-                                        ItemQuest()
+                            VStack{
+                                Text("Makanan Khas")
+                                ScrollView(.horizontal, showsIndicators: false){
+                                    LazyHGrid(rows: rowGrid, spacing: 10){
+                                        ForEach((0...3), id: \.self){_ in
+                                            ItemQuest()
+                                        }
                                     }
                                 }
                             }
@@ -66,7 +69,7 @@ struct ItemQuest: View {
             VStack{
                 Image("jakarta")
                     .resizable()
-                    .frame(width: 75, height: 75)
+                    .frame(width: 100, height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 Text("Soto Betawi")
             }

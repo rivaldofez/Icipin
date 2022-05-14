@@ -39,12 +39,19 @@ struct HomepageView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .offset(x: 0, y: -40)
                 
-                LazyVGrid(columns: columnGrid){
-                    ForEach((0...3), id: \.self) {_ in
-                        Text("Hello World")
+                ScrollView(.vertical, showsIndicators: false){
+                    LazyVGrid(columns: columnGrid){
+                        ForEach((0...3), id: \.self) {_ in
+                            ScrollView(.horizontal, showsIndicators: false){
+                                LazyHGrid(rows: rowGrid){
+                                    ForEach((0...3), id: \.self){_ in
+                                        ItemQuest()
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                ItemQuest()
                 
                 Spacer()
             }.ignoresSafeArea()
@@ -59,7 +66,7 @@ struct ItemQuest: View {
             VStack{
                 Image("jakarta")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 75, height: 75)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 Text("Soto Betawi")
             }

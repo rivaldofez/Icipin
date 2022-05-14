@@ -7,26 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EB5435B282BCF98004B68D8 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5435A282BCF98004B68D8 /* McEatApp.swift */; };
-		7EB5435D282BCF98004B68D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5435C282BCF98004B68D8 /* ContentView.swift */; };
-		7EB5435F282BCF99004B68D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB5435E282BCF99004B68D8 /* Assets.xcassets */; };
-		7EB54362282BCF99004B68D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB54361282BCF99004B68D8 /* Preview Assets.xcassets */; };
-		7EB54364282BCF99004B68D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB54363282BCF99004B68D8 /* Persistence.swift */; };
-		7EB54367282BCF99004B68D8 /* McEat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EB54365282BCF99004B68D8 /* McEat.xcdatamodeld */; };
+		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
+		7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A7282FD6B200B7B767 /* ContentView.swift */; };
+		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
+		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7EB54357282BCF98004B68D8 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EB5435A282BCF98004B68D8 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
-		7EB5435C282BCF98004B68D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7EB5435E282BCF99004B68D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7EB54361282BCF99004B68D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7EB54363282BCF99004B68D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		7EB54366282BCF99004B68D8 /* McEat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = McEat.xcdatamodel; sourceTree = "<group>"; };
+		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
+		7E8223A7282FD6B200B7B767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7EB54354282BCF98004B68D8 /* Frameworks */ = {
+		7E82239F282FD6B200B7B767 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,39 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7EB5434E282BCF98004B68D8 = {
+		7E822399282FD6B200B7B767 = {
 			isa = PBXGroup;
 			children = (
-				7EB54359282BCF98004B68D8 /* McEat */,
-				7EB54358282BCF98004B68D8 /* Products */,
+				7E8223A4282FD6B200B7B767 /* McEat */,
+				7E8223A3282FD6B200B7B767 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7EB54358282BCF98004B68D8 /* Products */ = {
+		7E8223A3282FD6B200B7B767 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EB54357282BCF98004B68D8 /* McEat.app */,
+				7E8223A2282FD6B200B7B767 /* McEat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7EB54359282BCF98004B68D8 /* McEat */ = {
+		7E8223A4282FD6B200B7B767 /* McEat */ = {
 			isa = PBXGroup;
 			children = (
-				7EB5435A282BCF98004B68D8 /* McEatApp.swift */,
-				7EB5435C282BCF98004B68D8 /* ContentView.swift */,
-				7EB5435E282BCF99004B68D8 /* Assets.xcassets */,
-				7EB54363282BCF99004B68D8 /* Persistence.swift */,
-				7EB54365282BCF99004B68D8 /* McEat.xcdatamodeld */,
-				7EB54360282BCF99004B68D8 /* Preview Content */,
+				7E8223A5282FD6B200B7B767 /* McEatApp.swift */,
+				7E8223A7282FD6B200B7B767 /* ContentView.swift */,
+				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
+				7E8223AB282FD6B300B7B767 /* Preview Content */,
 			);
 			path = McEat;
 			sourceTree = "<group>";
 		};
-		7EB54360282BCF99004B68D8 /* Preview Content */ = {
+		7E8223AB282FD6B300B7B767 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				7EB54361282BCF99004B68D8 /* Preview Assets.xcassets */,
+				7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -76,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7EB54356282BCF98004B68D8 /* McEat */ = {
+		7E8223A1282FD6B200B7B767 /* McEat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EB5436A282BCF99004B68D8 /* Build configuration list for PBXNativeTarget "McEat" */;
+			buildConfigurationList = 7E8223B0282FD6B300B7B767 /* Build configuration list for PBXNativeTarget "McEat" */;
 			buildPhases = (
-				7EB54353282BCF98004B68D8 /* Sources */,
-				7EB54354282BCF98004B68D8 /* Frameworks */,
-				7EB54355282BCF98004B68D8 /* Resources */,
+				7E82239E282FD6B200B7B767 /* Sources */,
+				7E82239F282FD6B200B7B767 /* Frameworks */,
+				7E8223A0282FD6B200B7B767 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,25 +84,25 @@
 			);
 			name = McEat;
 			productName = McEat;
-			productReference = 7EB54357282BCF98004B68D8 /* McEat.app */;
+			productReference = 7E8223A2282FD6B200B7B767 /* McEat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7EB5434F282BCF98004B68D8 /* Project object */ = {
+		7E82239A282FD6B200B7B767 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					7EB54356282BCF98004B68D8 = {
+					7E8223A1282FD6B200B7B767 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 7EB54352282BCF98004B68D8 /* Build configuration list for PBXProject "McEat" */;
+			buildConfigurationList = 7E82239D282FD6B200B7B767 /* Build configuration list for PBXProject "McEat" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 7EB5434E282BCF98004B68D8;
-			productRefGroup = 7EB54358282BCF98004B68D8 /* Products */;
+			mainGroup = 7E822399282FD6B200B7B767;
+			productRefGroup = 7E8223A3282FD6B200B7B767 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7EB54356282BCF98004B68D8 /* McEat */,
+				7E8223A1282FD6B200B7B767 /* McEat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7EB54355282BCF98004B68D8 /* Resources */ = {
+		7E8223A0282FD6B200B7B767 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB54362282BCF99004B68D8 /* Preview Assets.xcassets in Resources */,
-				7EB5435F282BCF99004B68D8 /* Assets.xcassets in Resources */,
+				7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */,
+				7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7EB54353282BCF98004B68D8 /* Sources */ = {
+		7E82239E282FD6B200B7B767 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB54367282BCF99004B68D8 /* McEat.xcdatamodeld in Sources */,
-				7EB54364282BCF99004B68D8 /* Persistence.swift in Sources */,
-				7EB5435D282BCF98004B68D8 /* ContentView.swift in Sources */,
-				7EB5435B282BCF98004B68D8 /* McEatApp.swift in Sources */,
+				7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */,
+				7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7EB54368282BCF99004B68D8 /* Debug */ = {
+		7E8223AE282FD6B300B7B767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		7EB54369282BCF99004B68D8 /* Release */ = {
+		7E8223AF282FD6B300B7B767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,7 +259,7 @@
 			};
 			name = Release;
 		};
-		7EB5436B282BCF99004B68D8 /* Debug */ = {
+		7E8223B1282FD6B300B7B767 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -295,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		7EB5436C282BCF99004B68D8 /* Release */ = {
+		7E8223B2282FD6B300B7B767 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -326,38 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7EB54352282BCF98004B68D8 /* Build configuration list for PBXProject "McEat" */ = {
+		7E82239D282FD6B200B7B767 /* Build configuration list for PBXProject "McEat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EB54368282BCF99004B68D8 /* Debug */,
-				7EB54369282BCF99004B68D8 /* Release */,
+				7E8223AE282FD6B300B7B767 /* Debug */,
+				7E8223AF282FD6B300B7B767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EB5436A282BCF99004B68D8 /* Build configuration list for PBXNativeTarget "McEat" */ = {
+		7E8223B0282FD6B300B7B767 /* Build configuration list for PBXNativeTarget "McEat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EB5436B282BCF99004B68D8 /* Debug */,
-				7EB5436C282BCF99004B68D8 /* Release */,
+				7E8223B1282FD6B300B7B767 /* Debug */,
+				7E8223B2282FD6B300B7B767 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7EB54365282BCF99004B68D8 /* McEat.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7EB54366282BCF99004B68D8 /* McEat.xcdatamodel */,
-			);
-			currentVersion = 7EB54366282BCF99004B68D8 /* McEat.xcdatamodel */;
-			path = McEat.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 7EB5434F282BCF98004B68D8 /* Project object */;
+	rootObject = 7E82239A282FD6B200B7B767 /* Project object */;
 }

@@ -9,6 +9,10 @@ import SwiftUI
 
 
 struct HomepageView: View {
+    var rowGrid = Array(repeating: GridItem(), count: 1)
+    var columnGrid = Array(repeating: GridItem(), count: 1)
+    
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -34,10 +38,32 @@ struct HomepageView: View {
                     .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .offset(x: 0, y: -40)
+                
+                LazyVGrid(columns: columnGrid){
+                    ForEach((0...3), id: \.self) {_ in
+                        Text("Hello World")
+                    }
+                }
+                ItemQuest()
+                
                 Spacer()
             }.ignoresSafeArea()
         }
         .navigationViewStyle(.stack)
+    }
+}
+
+struct ItemQuest: View {
+    var body: some View {
+        Button(action: {}){
+            VStack{
+                Image("jakarta")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                Text("Soto Betawi")
+            }
+        }
     }
 }
 

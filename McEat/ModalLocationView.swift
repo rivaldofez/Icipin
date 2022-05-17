@@ -10,8 +10,9 @@ import SwiftUI
 struct ModalLocationView: View {
     @Binding var isShowing: Bool
     @State private var isDragging = false
-    
     @State private var curHeight: CGFloat = 700
+    @State private var searchQueryLocation = ""
+    
     let minHeight: CGFloat = 400
     let maxHeight: CGFloat = 700
     
@@ -57,8 +58,33 @@ struct ModalLocationView: View {
             
             
             ZStack{
-                VStack{
-                    Text("Hello World")
+                VStack(alignment: .leading){
+                    Text("Pilih Lokasi")
+                    
+                    
+                    TextField(
+                        "Cari Lokasi",
+                        text: self.$searchQueryLocation
+                    )
+                    .onSubmit {
+                        print("onsubmit")
+                    }.padding(10)
+                    .border(.secondary)
+                    
+                    Divider()
+                    
+                    HStack{
+                        Image(systemName: "pin.circle")
+                            .resizable()
+                            .frame(width: 30, height:30)
+                            .foregroundColor(.gray)
+                        VStack(alignment: .leading){
+                            Text("Lokasimu saat ini")
+                            Text("Jakarta")
+                        }
+                    }
+                    
+                    Spacer()
                 }
                 .padding(.horizontal, 30)
             }

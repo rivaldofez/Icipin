@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ModalLocationView: View {
+    @Binding var isShowing: Bool
+    
     var body: some View {
         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
     }
@@ -15,6 +17,6 @@ struct ModalLocationView: View {
 
 struct ModalLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        ModalLocationView()
+        ModalLocationView(isShowing: .constant(true))
     }
 }

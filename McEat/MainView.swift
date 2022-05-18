@@ -12,7 +12,7 @@ struct MainView: View {
         TabView {
             HomepageView()
                 .tabItem{
-                    Label("Home", systemImage: "house.fill")
+                    Label("Quest", systemImage: "house.fill")
                 }
             
             FoodBookView()

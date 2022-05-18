@@ -180,7 +180,7 @@
 				210DCDCB2832317500A68637 /* ImagePicker.swift in Sources */,
 				210DCDBE2832168C00A68637 /* ScanView.swift in Sources */,
 				7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */,
-				7E8223B4282FD74000B7B767 /* HomePageView.swift in Sources */,
+				7E8223B4282FD74000B7B767 /* HomepageView.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
 				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
 				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,
@@ -317,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"McEat/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F8C4P2T95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = McEat/Info.plist;
@@ -348,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"McEat/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F8C4P2T95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = McEat/Info.plist;

@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct HomepageView: View {
+struct HomePageView: View {
     var rowGrid = Array(repeating: GridItem(), count: 1)
     var columnGrid = Array(repeating: GridItem(), count: 1)
     
@@ -16,7 +16,7 @@ struct HomepageView: View {
     var body: some View {
         NavigationView{
             VStack {
-                ZStack(){
+                ZStack(alignment: .topLeading){
                     Image("jakarta")
                         .resizable()
                         .frame(width: .infinity, height: 300)
@@ -31,7 +31,7 @@ struct HomepageView: View {
                             }
                             Text("Jakarta")
                         }
-                    }
+                    }.padding(10)
                 }
                 Text("Choose your Quest")
                     .frame(width: 300, height: 60)
@@ -79,6 +79,6 @@ struct ItemQuest: View {
 
 struct HomepageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomepageView()
+        HomePageView()
     }
 }

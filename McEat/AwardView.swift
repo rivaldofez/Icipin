@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AwardView: View {
     var body: some View {
-        Text("Ini adalah page award")
+        Text("Ini adalah page awards")
     }
 }
 

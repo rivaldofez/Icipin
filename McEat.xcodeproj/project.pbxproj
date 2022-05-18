@@ -7,25 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E378E1E28336B4800146B24 /* ModalLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E378E1D28336B4800146B24 /* ModalLocationView.swift */; };
+		210DCDBE2832168C00A68637 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDBD2832168C00A68637 /* ScanView.swift */; };
+		210DCDC028321AD900A68637 /* OpenCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDBF28321AD900A68637 /* OpenCamera.swift */; };
+		210DCDC2283222B000A68637 /* BukanIni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDC1283222B000A68637 /* BukanIni.swift */; };
+		210DCDC42832284B00A68637 /* YaBenar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDC32832284B00A68637 /* YaBenar.swift */; };
+		210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDC828322E0A00A68637 /* ProfileImageMod.swift */; };
+		210DCDCB2832317500A68637 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DCDCA2832317500A68637 /* ImagePicker.swift */; };
 		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
 		7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A7282FD6B200B7B767 /* ContentView.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
-		7E8223B4282FD74000B7B767 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B3282FD74000B7B767 /* HomePageView.swift */; };
+		7E8223B4282FD74000B7B767 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B3282FD74000B7B767 /* HomepageView.swift */; };
 		7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B5282FE5E700B7B767 /* MainView.swift */; };
 		7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B7282FE66A00B7B767 /* FoodBookView.swift */; };
 		7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B9282FE69400B7B767 /* AwardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E378E1D28336B4800146B24 /* ModalLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLocationView.swift; sourceTree = "<group>"; };
+		210DCDBD2832168C00A68637 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		210DCDBF28321AD900A68637 /* OpenCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCamera.swift; sourceTree = "<group>"; };
+		210DCDC1283222B000A68637 /* BukanIni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BukanIni.swift; sourceTree = "<group>"; };
+		210DCDC32832284B00A68637 /* YaBenar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaBenar.swift; sourceTree = "<group>"; };
+		210DCDC728322D5A00A68637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		210DCDC828322E0A00A68637 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
+		210DCDCA2832317500A68637 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
 		7E8223A7282FD6B200B7B767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7E8223B3282FD74000B7B767 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		7E8223B3282FD74000B7B767 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		7E8223B5282FE5E700B7B767 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7E8223B7282FE66A00B7B767 /* FoodBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBookView.swift; sourceTree = "<group>"; };
 		7E8223B9282FE69400B7B767 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
@@ -42,6 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210DCDBA2832161700A68637 /* ScanAndOthers */ = {
+			isa = PBXGroup;
+			children = (
+				210DCDBD2832168C00A68637 /* ScanView.swift */,
+				210DCDBF28321AD900A68637 /* OpenCamera.swift */,
+				210DCDC1283222B000A68637 /* BukanIni.swift */,
+				210DCDC32832284B00A68637 /* YaBenar.swift */,
+				210DCDCA2832317500A68637 /* ImagePicker.swift */,
+				210DCDC828322E0A00A68637 /* ProfileImageMod.swift */,
+			);
+			path = ScanAndOthers;
+			sourceTree = "<group>";
+		};
 		7E822399282FD6B200B7B767 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +85,14 @@
 		7E8223A4282FD6B200B7B767 /* McEat */ = {
 			isa = PBXGroup;
 			children = (
+				210DCDC728322D5A00A68637 /* Info.plist */,
 				7E8223A5282FD6B200B7B767 /* McEatApp.swift */,
 				7E8223A7282FD6B200B7B767 /* ContentView.swift */,
-				7E8223B3282FD74000B7B767 /* HomePageView.swift */,
+				210DCDBA2832161700A68637 /* ScanAndOthers */,
+				7E8223B3282FD74000B7B767 /* HomepageView.swift */,
 				7E8223B5282FE5E700B7B767 /* MainView.swift */,
 				7E8223B7282FE66A00B7B767 /* FoodBookView.swift */,
 				7E8223B9282FE69400B7B767 /* AwardView.swift */,
-				7E378E1D28336B4800146B24 /* ModalLocationView.swift */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
 			);
@@ -152,13 +177,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210DCDCB2832317500A68637 /* ImagePicker.swift in Sources */,
+				210DCDBE2832168C00A68637 /* ScanView.swift in Sources */,
 				7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */,
 				7E8223B4282FD74000B7B767 /* HomePageView.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
+				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
+				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,
 				7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */,
 				7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */,
-				7E378E1E28336B4800146B24 /* ModalLocationView.swift in Sources */,
+				210DCDC028321AD900A68637 /* OpenCamera.swift in Sources */,
 				7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */,
+				210DCDC2283222B000A68637 /* BukanIni.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +319,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"McEat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McEat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to use the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need to use library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +350,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"McEat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McEat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to use the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "we need to use library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

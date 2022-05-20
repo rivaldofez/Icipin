@@ -10,14 +10,21 @@ import AVKit
 import Vision
 
 struct ScanpageView: View {
+    @State var timeRemaining = 10
+        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         //call UIKit VC
+        
         ZStack{
             MainVCView()
-            Text("Hello World!")
+            
+            Text("\(timeRemaining)")
+                .onReceive(timer) { _ in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                }
+            }
         }
-        
-        
     }
 }
 
@@ -61,6 +68,7 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
         captureSession.startRunning()
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.frame
         
@@ -78,18 +86,25 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
     }
     
     func setupVision(){
-        guard let model = try? VNCoreMLModel(for: McEatDetector().model) else {return}
+        let model: McEatDetector = {
+            do {
+                let config = MLModelConfiguration()
+                return try McEatDetector(configuration: config)
+            } catch {
+                print("error")
+                fatalError("Couldn't create detector")
+            }
+        }()
         
-        self.requests = [VNCoreMLRequest(model: model) { finishedReq, err in
+        guard let vnModel = try? VNCoreMLModel(for: model.model) else {return}
+        
+        self.requests = [VNCoreMLRequest(model: vnModel) { finishedReq, err in
             guard let results = finishedReq.results as? [VNRecognizedObjectObservation] else {return}
+            guard let firstResult = results.first else {return}
             
-//            guard let firstObservation = results else {return}
-            guard let hasil = results.first else {return}
-            
-            guard let food = hasil.labels.first else {return}
+            guard let food = firstResult.labels.first else {return}
             print("\(food.identifier) = \(food.confidence)")
             
-//            print(firstObservation.identifier, firstObservation.confidence)
         }]
     }
     

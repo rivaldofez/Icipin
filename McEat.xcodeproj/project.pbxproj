@@ -97,9 +97,9 @@
 				7E8223B5282FE5E700B7B767 /* MainView.swift */,
 				7E8223B7282FE66A00B7B767 /* FoodBookView.swift */,
 				7E8223B9282FE69400B7B767 /* AwardView.swift */,
+				7E998CD82837793200E00DB9 /* ScanpageView.swift */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
 				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
-				7E998CD82837793200E00DB9 /* ScanpageView.swift */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
 			);
 			path = McEat;

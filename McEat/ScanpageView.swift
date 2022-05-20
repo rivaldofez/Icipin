@@ -73,16 +73,18 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
     }
     
     func setupVision(){
-        guard let model = try? VNCoreMLModel(for: McEat_Detector_1().model) else {return}
+        guard let model = try? VNCoreMLModel(for: McEatDetector().model) else {return}
         
         self.requests = [VNCoreMLRequest(model: model) { finishedReq, err in
             guard let results = finishedReq.results as? [VNRecognizedObjectObservation] else {return}
             
 //            guard let firstObservation = results else {return}
-            print(results.first)
             guard let hasil = results.first else {return}
             
-            print(hasil)
+            guard let food = hasil.labels.first else {return}
+            print("\(food.identifier) = \(food.confidence)")
+            
+            
 //            print(firstObservation.identifier, firstObservation.confidence)
         }]
     }

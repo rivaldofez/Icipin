@@ -37,6 +37,8 @@ struct MainVCView: UIViewControllerRepresentable {
 
 // create view controller
 class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate {
+    private var requests = [VNRequest]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +50,9 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
         
         captureSession.addInput(input)
-        captureSession.sessionPreset = .photo
         
+        captureSession.sessionPreset = .photo
+        captureSession.sessionPreset = .vga640x480
         captureSession.startRunning()
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -58,26 +61,39 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
         
         
         let dataOutput = AVCaptureVideoDataOutput()
-        dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoqueue"))
-        captureSession.addOutput(dataOutput)
+        if(captureSession.canAddOutput(dataOutput)){
+            captureSession.addOutput(dataOutput)
+            dataOutput.alwaysDiscardsLateVideoFrames = true
+            dataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
+            dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem))
+        }
+        
+        
         
     }
     
+    func setupVision(){
+        guard let model = try? VNCoreMLModel(for: McEat_Detector_1().model) else {return}
+        
+        self.requests = [VNCoreMLRequest(model: model) { finishedReq, err in
+            guard let results = finishedReq.results as? [VNRecognizedObjectObservation] else {return}
+            
+//            guard let firstObservation = results else {return}
+            print(results.first)
+            guard let hasil = results.first else {return}
+            
+            print(hasil)
+//            print(firstObservation.identifier, firstObservation.confidence)
+        }]
+    }
+    
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 //        print("Camera was able to capture a frame", Date())
-        
+        setupVision()
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-        guard let model = try? VNCoreMLModel(for: SqueezeNet().model) else {return}
         
-        let request = VNCoreMLRequest(model: model) { finishedReq, err in
-            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
-            
-            guard let firstObservation = results.first else {return}
-            
-            print(firstObservation.identifier, firstObservation.confidence)
-        }
-        
-        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform(self.requests)
     }
 }

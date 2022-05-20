@@ -10,25 +10,30 @@ import AVKit
 import Vision
 
 struct ScanpageView: View {
-    @State var timeRemaining = 10
+    @State var timeRemaining = 100
     @State var isShow = false
-    @State var prediction = ""
+    @State var prediction = "0"
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         //call UIKit VC
         
         ZStack{
-//            MainVCView(isShow: self.$isShow)
             
             ScanPageCustomView(prediction: self.$prediction)
-            Text(prediction)
-//            Text("\(timeRemaining)")
-//                .onReceive(timer) { _ in
-//                    if timeRemaining > 0 {
-//                        timeRemaining -= 1
-//                }
-//            }
             
+            VStack {
+                Text(prediction)
+                if(Float(prediction)! > 0.8 && timeRemaining > 0){
+                   Text("Hello")
+                }else{
+                   Text("Tidak Hello")
+                }
+                Text("\(timeRemaining)")
+            }
+        }.onReceive(timer) { _ in
+            if timeRemaining > 0 {
+                timeRemaining -= 1
+            }
         }
     }
 }
@@ -121,23 +126,18 @@ class ScanPageViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             guard let firstResult = results.first else {return}
 
             guard let food = firstResult.labels.first else {return}
-//            print("\(food.identifier) = \(food.confidence)")
             
-            self.updateIsShowValue(prediction: "\(food.identifier) = \(food.confidence)")
+            self.updateIsShowValue(prediction: "\(food.confidence)")
 
         }]
     }
 
 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//        print("Camera was able to capture a frame", Date())
         setupVision()
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-
-
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform(self.requests)
     }
-    
     
     func updateIsShowValue(prediction: String){
         customDelegate?.didUpdateWithValue(prediction)

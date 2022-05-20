@@ -84,7 +84,6 @@ class ScanpageViewController: UIViewController,  AVCaptureVideoDataOutputSampleB
             guard let food = hasil.labels.first else {return}
             print("\(food.identifier) = \(food.confidence)")
             
-            
 //            print(firstObservation.identifier, firstObservation.confidence)
         }]
     }

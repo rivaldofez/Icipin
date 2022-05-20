@@ -12,7 +12,12 @@ import Vision
 struct ScanpageView: View {
     var body: some View {
         //call UIKit VC
-        MainVCView()
+        ZStack{
+            MainVCView()
+            Text("Hello World!")
+        }
+        
+        
     }
 }
 

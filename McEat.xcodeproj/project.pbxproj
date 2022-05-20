@@ -21,7 +21,8 @@
 		7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B5282FE5E700B7B767 /* MainView.swift */; };
 		7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B7282FE66A00B7B767 /* FoodBookView.swift */; };
 		7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B9282FE69400B7B767 /* AwardView.swift */; };
-		7EE173BC2837321700692538 /* McEatDetector.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7EE173BB2837321700692538 /* McEatDetector.mlpackage */; };
+		7E998CD92837793200E00DB9 /* ScanpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E998CD82837793200E00DB9 /* ScanpageView.swift */; };
+		7E998CDB2837798200E00DB9 /* McEatDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		7E8223B5282FE5E700B7B767 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7E8223B7282FE66A00B7B767 /* FoodBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBookView.swift; sourceTree = "<group>"; };
 		7E8223B9282FE69400B7B767 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
-		7EE173BB2837321700692538 /* McEatDetector.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = McEatDetector.mlpackage; sourceTree = "<group>"; };
+		7E998CD82837793200E00DB9 /* ScanpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanpageView.swift; sourceTree = "<group>"; };
+		7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = McEatDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +93,13 @@
 				7E8223A5282FD6B200B7B767 /* McEatApp.swift */,
 				7E8223A7282FD6B200B7B767 /* ContentView.swift */,
 				210DCDBA2832161700A68637 /* ScanAndOthers */,
-				7E8223B3282FD74000B7B767 /* HomepageView.swift */,
+				7E8223B3282FD74000B7B767 /* HomePageView.swift */,
 				7E8223B5282FE5E700B7B767 /* MainView.swift */,
 				7E8223B7282FE66A00B7B767 /* FoodBookView.swift */,
 				7E8223B9282FE69400B7B767 /* AwardView.swift */,
-				7E3D0DCD2832C5F700F4F80A /* ScanpageView.swift */,
-				7EE173BB2837321700692538 /* McEatDetector.mlpackage */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
+				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
+				7E998CD82837793200E00DB9 /* ScanpageView.swift */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
 			);
 			path = McEat;
@@ -188,10 +190,12 @@
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
 				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
 				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,
+				7E998CDB2837798200E00DB9 /* McEatDetector.mlmodel in Sources */,
 				7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */,
 				7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */,
 				210DCDC028321AD900A68637 /* OpenCamera.swift in Sources */,
 				7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */,
+				7E998CD92837793200E00DB9 /* ScanpageView.swift in Sources */,
 				210DCDC2283222B000A68637 /* BukanIni.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

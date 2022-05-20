@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "363C2BEE-D273-4E88-8DF3-B52F9E221012": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "3F8906F6-72CA-4434-B401-FAF3415EADEB": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "A7D609B2-67DA-43F3-8BDA-8EC99AA0D0E2": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "McEatDetector.mlmodel",
+            "path": "com.apple.CoreML/McEatDetector.mlmodel"
+        }
+    },
+    "rootModelIdentifier": "A7D609B2-67DA-43F3-8BDA-8EC99AA0D0E2"
+}

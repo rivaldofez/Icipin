@@ -15,7 +15,8 @@ struct McEatApp: App {
 //            MainView()
 //            BadgePageView()
 //            DetailBadgeView()
-            VerifiedQuestView()
+//            VerifiedQuestView()
+            FailedQuestPage()
         }
     }
 }

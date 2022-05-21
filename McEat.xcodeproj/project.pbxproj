@@ -21,6 +21,7 @@
 		7E1193982838D5AC00DAAC6C /* BadgePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193972838D5AC00DAAC6C /* BadgePageView.swift */; };
 		7E11939C2838EADE00DAAC6C /* DetailBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */; };
 		7E11939E2838F51C00DAAC6C /* VerifiedQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */; };
+		7E1193A02838FF8700DAAC6C /* FailedQuestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */; };
 		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		7E1193972838D5AC00DAAC6C /* BadgePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgePageView.swift; sourceTree = "<group>"; };
 		7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBadgeView.swift; sourceTree = "<group>"; };
 		7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedQuestView.swift; sourceTree = "<group>"; };
+		7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedQuestPage.swift; sourceTree = "<group>"; };
 		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
 				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
+				7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */,
 			);
 			path = McEat;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
 				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,
 				7E998CDB2837798200E00DB9 /* McEatDetector.mlmodel in Sources */,
+				7E1193A02838FF8700DAAC6C /* FailedQuestPage.swift in Sources */,
 				7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */,
 				7E11939C2838EADE00DAAC6C /* DetailBadgeView.swift in Sources */,
 				210DCDC028321AD900A68637 /* OpenCamera.swift in Sources */,

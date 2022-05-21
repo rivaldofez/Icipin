@@ -46,8 +46,8 @@ struct Corners: View {
 }
 
 
-struct AngularCorners: View {
-    var angGrad: AngularGradient
+struct RadialCorners: View {
+    var radGrad: RadialGradient
     var tl: CGFloat = 0.0
     var tt: CGFloat = 0.0
     var bl: CGFloat = 0.0
@@ -79,7 +79,7 @@ struct AngularCorners: View {
                                 path.closeSubpath()
             }
             
-            paths.fill(angGrad).overlay(paths.stroke(.black, lineWidth: 2))
+            paths.fill(radGrad).overlay(paths.stroke(.black, lineWidth: 2))
         }
     }
 }

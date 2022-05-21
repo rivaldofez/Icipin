@@ -78,24 +78,28 @@ struct ItemQuest: View {
         Button(action: {}){
             ZStack{
                 VStack{
-                    Image(systemName: "xmark")
+                    Image("soto_betawi")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .offset(x: 0, y: -30)
+                        .offset(x: 0, y: -15)
                     HStack{
                         Text("Santan")
+                            .font(.system(.subheadline))
+                            .foregroundColor(.white)
                         Spacer()
                     }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     
                     HStack{
                         Text("Kental")
+                            .font(.system(.title2).bold())
+                            .foregroundColor(.white)
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 0))
                 }
             }.frame(width: 150, height: 150)
-                .background(AngularCorners(angGrad: AngularGradient(colors: [.blue,.white], center: .center), tl: 20, tt: 20, bl: 20, bt: 40))
+                .background(RadialCorners(radGrad: RadialGradient(colors: QuestData().questData[0].color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
                 .padding(.top,20)
                 .padding(5)
         }

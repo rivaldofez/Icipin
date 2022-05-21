@@ -65,7 +65,6 @@ struct QuestPageView: View {
                                         ScrollView(.horizontal, showsIndicators: false){
                                             LazyHGrid(rows: rowGrid, spacing: 10){
                                                 ForEach(quest.questItem, id: \.id){questItem in
-                                                    
                                                     ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
                                                 }
                                             }

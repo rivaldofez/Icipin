@@ -52,10 +52,10 @@ struct QuestPageView: View {
                         
                         ScrollView(.vertical, showsIndicators: false){
                             LazyVGrid(columns: columnGrid, spacing: 20){
-                                ForEach((0...3), id: \.self) {_ in
+                                ForEach(QuestData().questData, id: \.id) {quest in
                                     VStack{
                                         HStack{
-                                            Text("Makanan Khas")
+                                            Text(quest.category)
                                                 .font(.system(.body).bold())
                                                 .foregroundColor(.black)
                                                 .padding(.leading, 20)
@@ -63,8 +63,8 @@ struct QuestPageView: View {
                                         }
                                         ScrollView(.horizontal, showsIndicators: false){
                                             LazyHGrid(rows: rowGrid, spacing: 10){
-                                                ForEach((0...3), id: \.self){_ in
-                                                    ItemQuest()
+                                                ForEach(quest.questItem, id: \.id){questItem in
+                                                    ItemQuest(questItem: questItem)
                                                 }
                                             }
                                         }
@@ -84,25 +84,28 @@ struct QuestPageView: View {
 }
 
 struct ItemQuest: View {
+    var questItem: QuestItem
+
     
     var body: some View {
+        let titleArr = questItem.title.components(separatedBy: " ")
         Button(action: {}){
             ZStack{
                 VStack{
-                    Image("soto_betawi")
+                    Image(questItem.image)
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .offset(x: 0, y: -15)
                     HStack{
-                        Text("Santan")
+                        Text(titleArr[0])
                             .font(.system(.subheadline))
                             .foregroundColor(.white)
                         Spacer()
                     }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     
                     HStack{
-                        Text("Kental")
+                        Text(titleArr[1])
                             .font(.system(.title2).bold())
                             .foregroundColor(.white)
                         Spacer()
@@ -110,7 +113,7 @@ struct ItemQuest: View {
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 25, trailing: 0))
                 }
             }.frame(width: 130, height: 140)
-                .background(RadialCorners(radGrad: RadialGradient(colors: QuestData().questData[0].color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
+                .background(RadialCorners(radGrad: RadialGradient(colors: questItem.color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
                 .padding(EdgeInsets(top: 15, leading: 10, bottom: 5, trailing: 10))
 //                .padding(5)
         }

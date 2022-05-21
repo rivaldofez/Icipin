@@ -15,3 +15,10 @@ struct QuestItem: Identifiable {
     var isUnlock: Bool
 }
 
+
+struct Quest: Identifiable {
+    let id = UUID()
+    let category: String
+    var questItem: [QuestItem]
+}
+

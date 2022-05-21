@@ -18,12 +18,12 @@
 		7E1193912838A13000DAAC6C /* QuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193902838A13000DAAC6C /* QuestModel.swift */; };
 		7E1193942838A5E300DAAC6C /* QuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193932838A5E300DAAC6C /* QuestData.swift */; };
 		7E1193962838BB6100DAAC6C /* DetailQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193952838BB6100DAAC6C /* DetailQuestView.swift */; };
+		7E1193982838D5AC00DAAC6C /* BadgePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193972838D5AC00DAAC6C /* BadgePageView.swift */; };
 		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
 		7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B5282FE5E700B7B767 /* MainView.swift */; };
 		7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B7282FE66A00B7B767 /* FoodBookView.swift */; };
-		7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B9282FE69400B7B767 /* AwardView.swift */; };
 		7E998CD92837793200E00DB9 /* ScanpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E998CD82837793200E00DB9 /* ScanpageView.swift */; };
 		7E998CDB2837798200E00DB9 /* McEatDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */; };
 /* End PBXBuildFile section */
@@ -41,13 +41,13 @@
 		7E1193902838A13000DAAC6C /* QuestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestModel.swift; sourceTree = "<group>"; };
 		7E1193932838A5E300DAAC6C /* QuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		7E1193952838BB6100DAAC6C /* DetailQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuestView.swift; sourceTree = "<group>"; };
+		7E1193972838D5AC00DAAC6C /* BadgePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgePageView.swift; sourceTree = "<group>"; };
 		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E8223B5282FE5E700B7B767 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7E8223B7282FE66A00B7B767 /* FoodBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBookView.swift; sourceTree = "<group>"; };
-		7E8223B9282FE69400B7B767 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
 		7E998CD82837793200E00DB9 /* ScanpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanpageView.swift; sourceTree = "<group>"; };
 		7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = McEatDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,10 +127,10 @@
 				210DCDBA2832161700A68637 /* ScanAndOthers */,
 				7E8223B5282FE5E700B7B767 /* MainView.swift */,
 				7E8223B7282FE66A00B7B767 /* FoodBookView.swift */,
-				7E8223B9282FE69400B7B767 /* AwardView.swift */,
 				7E998CD82837793200E00DB9 /* ScanpageView.swift */,
 				7E11938A283881AE00DAAC6C /* QuestPageView.swift */,
 				7E1193952838BB6100DAAC6C /* DetailQuestView.swift */,
+				7E1193972838D5AC00DAAC6C /* BadgePageView.swift */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
 				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
@@ -218,10 +218,10 @@
 			files = (
 				7E11938B283881AE00DAAC6C /* QuestPageView.swift in Sources */,
 				210DCDCB2832317500A68637 /* ImagePicker.swift in Sources */,
+				7E1193982838D5AC00DAAC6C /* BadgePageView.swift in Sources */,
 				7E1193962838BB6100DAAC6C /* DetailQuestView.swift in Sources */,
 				7E1193912838A13000DAAC6C /* QuestModel.swift in Sources */,
 				210DCDBE2832168C00A68637 /* ScanView.swift in Sources */,
-				7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */,
 				7E11938E28388AB600DAAC6C /* Corners.swift in Sources */,
 				7E1193942838A5E300DAAC6C /* QuestData.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,

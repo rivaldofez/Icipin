@@ -21,9 +21,9 @@ struct MainView: View {
                         Label("Quest", systemImage: "house.fill")
                     }
                 
-                AwardView()
+                BadgePageView()
                     .tabItem{
-                        Label("Award", systemImage: "gift")
+                        Label("Badge", systemImage: "gift")
                             .background(.red)
                     }
             }

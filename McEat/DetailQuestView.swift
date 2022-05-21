@@ -10,11 +10,60 @@ import SwiftUI
 
 struct DetailQuestView: View {
     var questItem: QuestItem
+    var columnGrid = Array(repeating: GridItem(), count: 1)
     
     var body: some View {
-        Text(questItem.title)
+        GeometryReader { geo in
+            VStack {
+                LazyVGrid(columns: columnGrid){
+                    ForEach((0...3), id: \.self){_ in
+                        ItemClue()
+                    }
+                }
+                
+                Spacer()
+                
+                Text("Sudah siap membuka Quest?")
+                    .font(.system(.title3).bold())
+                    .foregroundColor(.black)
+                Text("Ayo scan makananmu dan buktikan!")
+                    .font(.system(.title3).bold())
+                    .foregroundColor(.black)
+                
+                Spacer()
+                Button(action: {}){
+                    Text("Scan")
+                        .font(.system(.title).bold())
+                        .foregroundColor(.white)
+                }
+                .frame(width: geo.size.width, height: 85)
+                .background(Corners(color: .red, tl: 20, tt: 20, bl: 40, bt: 40))
+            }
+            .navigationTitle("Clue")
+            .edgesIgnoringSafeArea(.bottom)
+        }
     }
 }
+
+struct ItemClue: View {
+    var body: some View {
+        HStack{
+            Circle()
+                .frame(width: 20, height: 20)
+                .foregroundColor(.red)
+            
+            Text("Isiannya terdiri atas daging sapi, jeroan, organ sapi seperti mata sapi, torpedo dan hati")
+                .padding(.leading, 10)
+        }
+        .padding(EdgeInsets(top: 20, leading: 25, bottom: 20, trailing: 25))
+    }
+}
+
+//struct ItemClue_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemClue()
+//    }
+//}
 
 //struct DetailQuestView_Previews: PreviewProvider {
 //    static var previews: some View {

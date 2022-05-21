@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.red
+    }
+    
     var body: some View {
-        TabView {
-            QuestPageView()
-                .tabItem{
-                    Label("Quest", systemImage: "house.fill")
-                }
-            
-            AwardView()
-                .tabItem{
-                    Label("Award", systemImage: "gift")
-                }
+        NavigationView{
+            TabView {
+                QuestPageView()
+                    .tabItem{
+                        Label("Quest", systemImage: "house.fill")
+                    }
+                
+                AwardView()
+                    .tabItem{
+                        Label("Award", systemImage: "gift")
+                            .background(.red)
+                    }
+            }
         }
     }
 }

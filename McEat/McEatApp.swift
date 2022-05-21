@@ -11,6 +11,7 @@ import SwiftUI
 struct McEatApp: App {
     var body: some Scene {
         WindowGroup {
+//            DetailQuestView(questItem: QuestData().questData[0].questItem[0])
             MainView()
         }
     }

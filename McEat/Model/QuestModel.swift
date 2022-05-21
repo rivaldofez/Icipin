@@ -12,6 +12,7 @@ struct QuestItem: Identifiable {
     let title: String
     let image: String
     let color: [Color]
+    var clue: [String]
     var isUnlock: Bool
 }
 

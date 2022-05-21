@@ -17,7 +17,6 @@ struct QuestPageView: View {
     
     var body: some View {
         GeometryReader { geo in
-            NavigationView{
                 ZStack{
                     VStack {
                         ZStack{
@@ -84,8 +83,7 @@ struct QuestPageView: View {
                     }
                 }
                 .navigationBarHidden(true)
-                .ignoresSafeArea()
-            }
+                .edgesIgnoringSafeArea(.top)
         }
     }
 }

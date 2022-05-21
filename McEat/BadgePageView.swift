@@ -34,26 +34,9 @@ struct BadgePageView: View {
                     LazyVGrid(columns: columnGrid){
                         ForEach((0...10), id: \.self){_ in
                             Button(action: {}){
-                                VStack{
-                                    Spacer()
-                                    Text("6 / 16")
-                                    
-                                    ZStack(alignment: .leading) {
-                                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                            .stroke(.black, lineWidth: 2)
-                                            .frame(width: 120, height: 10)
-                                            .foregroundColor(Color.black.opacity(0.1))
-                                            
-                                        
-                                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                            .frame(width: 50, height: 10)
-                                            .foregroundColor(Color.red)
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    Text("Selesaikan semua Quest yang ada di jakarta")
-                                    Spacer()
+                                ZStack{
+                                    ItemBadge(geo: geo)
+                                    ItemBadgeLocked(geo: geo)
                                 }
                             }
                             .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
@@ -77,16 +60,47 @@ struct ItemBadge: View {
     var geo: GeometryProxy
     
     var body: some View {
-        Button(action: {}){
+        VStack{
             Image("soto_betawi")
                 .resizable()
                 .frame(width: (geo.size.width/2)-60, height: (geo.size.width/2)-60)
         }
         .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
-        .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .shadow(color: .gray, radius: 3, x: 0, y: 0)
-        .padding(20)
+    }
+}
+
+
+struct ItemBadgeLocked: View {
+    var geo: GeometryProxy
+    
+    var body: some View {
+        VStack{
+            Spacer()
+            Text("6 / 16")
+                .font(.system(.caption))
+                .foregroundColor(.black)
+            
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(.black, lineWidth: 2)
+                    .frame(width: 120, height: 10)
+                    .foregroundColor(Color.black.opacity(0.1))
+                    
+                
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .frame(width: 50, height: 10)
+                    .foregroundColor(Color.red)
+            }
+            
+            Spacer()
+            
+            Text("Selesaikan semua Quest yang ada di jakarta")
+                .font(.system(.body).bold())
+                .foregroundColor(.black)
+            Spacer()
+        }
+        .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
+        .background(.gray.opacity(0.95))
     }
 }
 

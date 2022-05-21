@@ -135,11 +135,11 @@
 				7E11938A283881AE00DAAC6C /* QuestPageView.swift */,
 				7E1193952838BB6100DAAC6C /* DetailQuestView.swift */,
 				7E1193972838D5AC00DAAC6C /* BadgePageView.swift */,
+				7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */,
+				7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
 				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
-				7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */,
-				7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */,
 			);
 			path = McEat;
 			sourceTree = "<group>";

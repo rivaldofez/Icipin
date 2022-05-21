@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BadgePageView: View {
     var columnGrid = Array(repeating: GridItem(), count: 2)
+    @State var showDetailBadge: Bool = false
     
     var body: some View {
         GeometryReader { geo in
@@ -33,7 +34,10 @@ struct BadgePageView: View {
                 ScrollView(.vertical, showsIndicators: false){
                     LazyVGrid(columns: columnGrid){
                         ForEach((0...10), id: \.self){_ in
-                            Button(action: {}){
+                            Button(action: {
+                                self.showDetailBadge = true
+                                
+                            }){
                                 ZStack{
                                     ItemBadge(geo: geo)
                                     ItemBadgeLocked(geo: geo)
@@ -46,7 +50,10 @@ struct BadgePageView: View {
                             .padding(20)
                             
                         }
-                    }
+                    }.background(
+                        NavigationLink(destination: DetailBadgeView(), isActive: self.$showDetailBadge){
+                        }
+                    )
                 }
                 
             }.navigationBarHidden(true)

@@ -56,7 +56,7 @@ struct AngularCorners: View {
     
     var body: some View {
         GeometryReader { geo in
-            Path { path in
+            let paths = Path { path in
                 
                 let w = geo.size.width
                 let h = geo.size.height
@@ -78,7 +78,8 @@ struct AngularCorners: View {
                                 path.addArc(center: CGPoint(x: tl, y: tl), radius: tl, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
                                 path.closeSubpath()
             }
-            .fill(angGrad)
+            
+            paths.fill(angGrad).overlay(paths.stroke(.black, lineWidth: 2))
         }
     }
 }

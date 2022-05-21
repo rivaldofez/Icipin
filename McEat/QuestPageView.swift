@@ -73,26 +73,34 @@ struct QuestPageView: View {
 }
 
 struct ItemQuest: View {
-    var color = LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .top, endPoint: .bottom)
     
     var body: some View {
         Button(action: {}){
             ZStack{
-                
                 VStack{
-                    Image("jakarta")
+                    Image(systemName: "xmark")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-                    Text("Soto Betawi")
+                        .offset(x: 0, y: -30)
+                    HStack{
+                        Text("Santan")
+                        Spacer()
+                    }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                    
+                    HStack{
+                        Text("Kental")
+                        Spacer()
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 0))
                 }
             }.frame(width: 150, height: 150)
-                .background(Corners(color: .red.opacity(1), tl: 10, tt: 10, bl: 10, bt: 20))
-                .padding(10)
+                .background(AngularCorners(angGrad: AngularGradient(colors: [.blue,.white], center: .center), tl: 20, tt: 20, bl: 20, bt: 40))
+                .padding(.top,20)
+                .padding(5)
         }
     }
 }
-
 
 struct QuestPageView_Previews: PreviewProvider {
     static var previews: some View {

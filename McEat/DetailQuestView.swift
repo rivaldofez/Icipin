@@ -15,9 +15,9 @@ struct DetailQuestView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                LazyVGrid(columns: columnGrid){
-                    ForEach((0...3), id: \.self){_ in
-                        ItemClue()
+                LazyVGrid(columns: columnGrid, alignment: .leading){
+                    ForEach(questItem.clue, id: \.self){clue in
+                        ItemClue(clue: clue)
                     }
                 }
                 
@@ -46,13 +46,15 @@ struct DetailQuestView: View {
 }
 
 struct ItemClue: View {
+    var clue: String
+    
     var body: some View {
         HStack{
             Circle()
                 .frame(width: 20, height: 20)
                 .foregroundColor(.red)
             
-            Text("Isiannya terdiri atas daging sapi, jeroan, organ sapi seperti mata sapi, torpedo dan hati")
+            Text(clue)
                 .padding(.leading, 10)
         }
         .padding(EdgeInsets(top: 20, leading: 25, bottom: 20, trailing: 25))

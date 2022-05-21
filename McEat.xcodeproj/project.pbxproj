@@ -21,7 +21,6 @@
 		7E8223A8282FD6B200B7B767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A7282FD6B200B7B767 /* ContentView.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
-		7E8223B4282FD74000B7B767 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B3282FD74000B7B767 /* HomePageView.swift */; };
 		7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B5282FE5E700B7B767 /* MainView.swift */; };
 		7E8223B8282FE66A00B7B767 /* FoodBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B7282FE66A00B7B767 /* FoodBookView.swift */; };
 		7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223B9282FE69400B7B767 /* AwardView.swift */; };
@@ -46,7 +45,6 @@
 		7E8223A7282FD6B200B7B767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7E8223B3282FD74000B7B767 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		7E8223B5282FE5E700B7B767 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7E8223B7282FE66A00B7B767 /* FoodBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBookView.swift; sourceTree = "<group>"; };
 		7E8223B9282FE69400B7B767 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				7E8223A5282FD6B200B7B767 /* McEatApp.swift */,
 				7E8223A7282FD6B200B7B767 /* ContentView.swift */,
 				210DCDBA2832161700A68637 /* ScanAndOthers */,
-				7E8223B3282FD74000B7B767 /* HomePageView.swift */,
 				7E8223B5282FE5E700B7B767 /* MainView.swift */,
 				7E8223B7282FE66A00B7B767 /* FoodBookView.swift */,
 				7E8223B9282FE69400B7B767 /* AwardView.swift */,
@@ -226,7 +223,6 @@
 				7E8223BA282FE69400B7B767 /* AwardView.swift in Sources */,
 				7E11938E28388AB600DAAC6C /* Corners.swift in Sources */,
 				7E1193942838A5E300DAAC6C /* QuestData.swift in Sources */,
-				7E8223B4282FD74000B7B767 /* HomePageView.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
 				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
 				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,

@@ -15,11 +15,6 @@ struct MainView: View {
                     Label("Quest", systemImage: "house.fill")
                 }
             
-            FoodBookView()
-                .tabItem{
-                    Label("Food Book", systemImage: "book.fill")
-                }
-            
             AwardView()
                 .tabItem{
                     Label("Award", systemImage: "gift")

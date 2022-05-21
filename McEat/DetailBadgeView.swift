@@ -11,7 +11,7 @@ struct DetailBadgeView: View {
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .center) {
-                Spacer()
+//                Spacer()
                 
                 Text("Jakarta Culinary Enthusiast")
                     .font(.system(.title2).bold())
@@ -53,6 +53,9 @@ struct DetailBadgeView: View {
                 Spacer()
             }
             .frame(width: geo.size.width, height: geo.size.height)
+//            .navigationBarBackButtonHidden(false)
+//            .navigationBarHidden(true)
+            
         }
     }
 }

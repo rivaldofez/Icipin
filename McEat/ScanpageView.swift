@@ -18,7 +18,6 @@ struct ScanpageView: View {
         //call UIKit VC
         
         ZStack{
-            
             ScanPageCustomView(prediction: self.$prediction)
             
             VStack {

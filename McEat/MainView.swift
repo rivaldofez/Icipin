@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            HomePageView()
+            QuestPageView()
                 .tabItem{
                     Label("Quest", systemImage: "house.fill")
                 }

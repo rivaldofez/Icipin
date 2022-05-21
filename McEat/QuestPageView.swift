@@ -127,6 +127,17 @@ struct ItemQuest: View {
     }
 }
 
+extension View {
+    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping ()->()) -> some View {
+        
+        return self
+            .background(
+                HalfsheetHelper(sheetView: sheetView(), showSheet: showSheet, onEnd: onEnd)
+            )
+    }
+    
+}
+
 //struct QuestPageView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        QuestPageView()

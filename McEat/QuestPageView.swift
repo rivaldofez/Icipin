@@ -21,11 +21,17 @@ struct QuestPageView: View {
                         ZStack{
                             HStack {
                                 Image(systemName: "xmark")
-                                VStack {
+                                    .foregroundColor(.white)
+                                VStack(alignment:.leading) {
                                     Text("Lokasi Kamu")
+                                        .font(.system(.caption))
+                                        .foregroundColor(.white)
                                     Text("Jakarta")
+                                        .font(.system(.body).bold())
+                                        .foregroundColor(.white)
                                 }
                                 Image(systemName: "chevron.down")
+                                    .foregroundColor(.white)
                                 Spacer()
                             }.onTapGesture {
                                 print("hello")
@@ -33,10 +39,12 @@ struct QuestPageView: View {
                             
                         }
                         .frame(width: geo.size.width, height: 150)
-                        .background(Corners(color: .red, tl: 0, tt: 0, bl: 100, bt: 100))
+                        .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
                         
                         
                         Text("Choose your Quest")
+                            .font(.headline.bold())
+                            .foregroundColor(.black)
                             .frame(width: 250, height: 60)
                             .background(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -48,6 +56,9 @@ struct QuestPageView: View {
                                     VStack{
                                         HStack{
                                             Text("Makanan Khas")
+                                                .font(.system(.body).bold())
+                                                .foregroundColor(.black)
+                                                .padding(.leading, 20)
                                             Spacer()
                                         }
                                         ScrollView(.horizontal, showsIndicators: false){
@@ -60,7 +71,7 @@ struct QuestPageView: View {
                                         Divider()
                                     }
                                 }
-                            }.padding(10)
+                            }
                         }
                         .offset(x:0, y:-40)
                     }
@@ -96,12 +107,12 @@ struct ItemQuest: View {
                             .foregroundColor(.white)
                         Spacer()
                     }
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 25, trailing: 0))
                 }
-            }.frame(width: 150, height: 150)
+            }.frame(width: 130, height: 140)
                 .background(RadialCorners(radGrad: RadialGradient(colors: QuestData().questData[0].color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
-                .padding(.top,20)
-                .padding(5)
+                .padding(EdgeInsets(top: 15, leading: 10, bottom: 5, trailing: 10))
+//                .padding(5)
         }
     }
 }

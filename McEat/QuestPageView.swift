@@ -15,7 +15,6 @@ struct QuestPageView: View {
                 ZStack{
                     VStack {
                         ZStack{
-                            Color.red
                             HStack {
                                 Image(systemName: "xmark")
                                 VStack {
@@ -28,6 +27,7 @@ struct QuestPageView: View {
                             }
                         }
                         .frame(width: geo.size.width, height: 200)
+                        .background(Corners(color: .red, tl: 0, tt: 0, bl: 30, bt: 30))
                         
                         Spacer()
                     }

@@ -17,7 +17,7 @@ struct QuestPageView: View {
     
     var body: some View {
         GeometryReader { geo in
-                ZStack{
+                
                     VStack {
                         ZStack{
                             HStack {
@@ -79,10 +79,10 @@ struct QuestPageView: View {
                             )
                         }
                         .offset(x:0, y:-40)
-                    }
-                }
-                .navigationBarHidden(true)
-                .edgesIgnoringSafeArea(.top)
+                    }.navigationBarHidden(true)
+                        .edgesIgnoringSafeArea(.top)
+                
+                
         }
     }
 }

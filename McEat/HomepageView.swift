@@ -72,19 +72,7 @@ struct HomePageView: View {
     }
 }
 
-struct ItemQuest: View {
-    var body: some View {
-        Button(action: {}){
-            VStack{
-                Image("jakarta")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                Text("Soto Betawi")
-            }
-        }
-    }
-}
+
 
 struct HomepageView_Previews: PreviewProvider {
     static var previews: some View {

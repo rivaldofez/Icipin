@@ -11,12 +11,13 @@ import SwiftUI
 struct McEatApp: App {
     var body: some Scene {
         WindowGroup {
+//            QuestPageView()
 //            DetailQuestView(questItem: QuestData().questData[0].questItem[0])
-//            MainView()
+            MainView()
 //            BadgePageView()
 //            DetailBadgeView()
 //            VerifiedQuestView()
-            FailedQuestPage()
+//            FailedQuestPage()
         }
     }
 }

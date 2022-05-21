@@ -14,6 +14,7 @@ struct QuestPageView: View {
     
     @State var showDetailQuest : Bool = false
     @State var selectedQuest: QuestItem = QuestData().questData[0].questItem[0]
+    @State var showSheetLocation: Bool = false
     
     var body: some View {
         GeometryReader { geo in
@@ -30,17 +31,26 @@ struct QuestPageView: View {
                                         .font(.system(.body).bold())
                                         .foregroundColor(.white)
                                 }
-                                Image(systemName: "chevron.down")
-                                    .foregroundColor(.white)
+                                Button {
+                                    showSheetLocation = true
+                                } label: {
+                                    Image(systemName: "chevron.down")
+                                        .foregroundColor(.white)
+                                }
+                                .halfSheet(showSheet: self.$showSheetLocation){
+                                    ZStack{
+                                        Color.white
+                                        Text("Hello world")
+                                    }.ignoresSafeArea()
+                                } onEnd: {
+                                    print("Dismissed")
+                                }
                                 Spacer()
-                            }.onTapGesture {
-                                print("hello")
                             }.padding(.leading, 20)
                             
                         }
                         .frame(width: geo.size.width, height: 150)
                         .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
-                        
                         
                         Text("Choose your Quest")
                             .font(.headline.bold())
@@ -128,16 +138,20 @@ struct ItemQuest: View {
 }
 
 extension View {
-    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping ()->()) -> some View {
+    //binding show Variable
+    
+    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping ()->()) -> some View{
         
+        
+        //using overlay / background because we want use frame from swiftui
         return self
             .background(
-                HalfsheetHelper(sheetView: sheetView(), showSheet: showSheet, onEnd: onEnd)
+                HalfSheetHelper(sheetView: sheetView(), showSheet: showSheet, onEnd: onEnd)
             )
     }
 }
 
-struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
+struct HalfSheetHelper<SheetView: View> : UIViewControllerRepresentable{
     var sheetView: SheetView
     @Binding var showSheet: Bool
     var onEnd: ()->()
@@ -155,46 +169,60 @@ struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
         if showSheet {
+            //presenting modal view
             let sheetController = CustomHostingController(rootView: sheetView)
             sheetController.presentationController?.delegate = context.coordinator
             
             uiViewController.present(sheetController, animated: true)
+            
+            
+//            uiViewController.present(sheetController, animated: true){
+//                // toggling show state
+//                DispatchQueue.main.async {
+//                    self.showSheet.toggle()
+//                }
+//            }
         }else{
+            //closing view when showsheet toggled again
             uiViewController.dismiss(animated: true)
         }
     }
     
+    //on Dismiss
     class Coordinator: NSObject, UISheetPresentationControllerDelegate {
         var parent: HalfSheetHelper
         
-        init(parent: HalfSheetHelper){
+        init(parent: HalfSheetHelper) {
             self.parent = parent
         }
         
         func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
             parent.showSheet = false
-            parent.onEnd()
+            parent.onEnd
         }
     }
 }
-
 class CustomHostingController<Content: View>: UIHostingController<Content> {
     override func viewDidLoad() {
+        //setting presentation controller properties
+        
         view.backgroundColor = .clear
         
         if let presentationController = presentationController as? UISheetPresentationController {
             presentationController.detents = [
                 .medium(),
                 .large()
+            
             ]
             
+            //showing grab point
             presentationController.prefersGrabberVisible = true
-            presentationController.preferredCornerRadius = 40
+            presentationController.preferredCornerRadius = 50
         }
     }
 }
-
 //struct QuestPageView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        QuestPageView()

@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct QuestPageView: View {
-    
     var rowGrid = Array(repeating: GridItem(), count: 1)
     var columnGrid = Array(repeating: GridItem(), count: 1)
     

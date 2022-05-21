@@ -55,7 +55,6 @@ struct DetailBadgeView: View {
             .frame(width: geo.size.width, height: geo.size.height)
 //            .navigationBarBackButtonHidden(false)
 //            .navigationBarHidden(true)
-            
         }
     }
 }

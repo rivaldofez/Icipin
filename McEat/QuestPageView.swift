@@ -17,7 +17,6 @@ struct QuestPageView: View {
     
     var body: some View {
         GeometryReader { geo in
-                
                     VStack {
                         ZStack{
                             HStack {

@@ -9,7 +9,19 @@ import SwiftUI
 
 struct VerifiedQuestView: View {
     var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+        VStack {
+            Text("CONGRATULATIONS")
+                .font(.system(.title2).bold())
+                .foregroundColor(.black)
+            Text("Kamu telah berhasi; menjawab Questnya")
+                .font(.system(.body))
+                .foregroundColor(.black)
+            Image("soto_betawi")
+                .resizable()
+                .frame(width: 200, height: 200)
+            Text("Soto Betawi")
+                .font(.system(.title2).bold())
+        }
     }
 }
 

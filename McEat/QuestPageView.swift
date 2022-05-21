@@ -12,6 +12,9 @@ struct QuestPageView: View {
     var rowGrid = Array(repeating: GridItem(), count: 1)
     var columnGrid = Array(repeating: GridItem(), count: 1)
     
+    @State var showDetailQuest : Bool = false
+    @State var selectedQuest: QuestItem = QuestData().questData[0].questItem[0]
+    
     var body: some View {
         GeometryReader { geo in
             NavigationView{
@@ -63,7 +66,8 @@ struct QuestPageView: View {
                                         ScrollView(.horizontal, showsIndicators: false){
                                             LazyHGrid(rows: rowGrid, spacing: 10){
                                                 ForEach(quest.questItem, id: \.id){questItem in
-                                                    ItemQuest(questItem: questItem)
+                                                    
+                                                    ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
                                                 }
                                             }
                                         }
@@ -71,6 +75,10 @@ struct QuestPageView: View {
                                     }
                                 }
                             }
+                            .background(
+                                NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
+                                }
+                            )
                         }
                         .offset(x:0, y:-40)
                     }
@@ -83,12 +91,17 @@ struct QuestPageView: View {
 }
 
 struct ItemQuest: View {
+    @Binding var showDetailQuestPage : Bool
+    @Binding var selectedQuestItem : QuestItem
     var questItem: QuestItem
 
     
     var body: some View {
         let titleArr = questItem.title.components(separatedBy: " ")
-        Button(action: {}){
+        Button(action: {
+            showDetailQuestPage = true
+            selectedQuestItem = questItem
+        }){
             ZStack{
                 VStack{
                     Image(questItem.image)
@@ -114,14 +127,13 @@ struct ItemQuest: View {
             }.frame(width: 130, height: 140)
                 .background(RadialCorners(radGrad: RadialGradient(colors: questItem.color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
                 .padding(EdgeInsets(top: 15, leading: 10, bottom: 5, trailing: 10))
-//                .padding(5)
         }
     }
 }
 
-struct QuestPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestPageView()
-    }
-}
+//struct QuestPageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuestPageView()
+//    }
+//}
 

@@ -9,13 +9,15 @@ import SwiftUI
 
 
 struct DetailQuestView: View {
+    var questItem: QuestItem
+    
     var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+        Text(questItem.title)
     }
 }
 
-struct DetailQuestView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailQuestView()
-    }
-}
+//struct DetailQuestView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailQuestView(questItem: QuestData().questData[0].questItem)
+//    }
+//}

@@ -158,7 +158,7 @@ struct ItemQuest: View {
                 }
             }.frame(width: 130, height: 140)
                 .background(RadialCorners(radGrad: RadialGradient(colors: questItem.color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))
-                .padding(EdgeInsets(top: 15, leading: 10, bottom: 5, trailing: 10))
+                .padding(EdgeInsets(top: 30, leading: 10, bottom: 5, trailing: 10))
         }
     }
 }

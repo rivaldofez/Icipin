@@ -32,12 +32,13 @@ struct ScanpageView: View {
 //                }
 //                Text("\(timeRemaining)")
                 
-
-                Text(predict?.label ?? "")
-                Text("\(predict?.confidence ?? 0.0)")
+                
+                
                     
                 
                 Spacer()
+                Text(predict?.label ?? "")
+                Text("\(predict?.confidence ?? 0.0)")
                 Text(predict == nil ? "Gerakan Kamera Ke Makanan" : "Makanan Ditemukan!")
                     .font(.system(.title3).bold())
                     .foregroundColor(CustomColor.white)
@@ -52,7 +53,7 @@ struct ScanpageView: View {
                 NavigationLink(destination: VerifiedQuestView(), isActive: self.$showVerifiedPage){
                 }
                 .onReceive(timer){_ in
-                    if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML && timeRemaining < 10){
+                    if(predict?.confidence ?? 0 > 0.8 && predict?.label == questItem.labelML && timeRemaining < 10){
                         self.showVerifiedPage = true
                         self.failedPage = false
                         self.timer.upstream.connect().cancel()

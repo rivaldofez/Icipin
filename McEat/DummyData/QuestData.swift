@@ -221,7 +221,7 @@ class QuestData {
                                         "Dijual disebuah kedai di PIK (Pantai Indah Kapuk)"
                                       ],
                                       isUnlock: false),
-                            QuestItem(labelML: "roti_buaya", title: "Siomay Tiongkok", image: "soto_betawi",
+                            QuestItem(labelML: "haka_dimsum", title: "Siomay Tiongkok", image: "haka_dimsum",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],

@@ -29,6 +29,7 @@ struct BadgePageView: View {
                     .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .offset(x: 0, y: -40)
+                    .padding(.bottom, -40)
                 
                 
                 ScrollView(.vertical, showsIndicators: false){
@@ -55,6 +56,7 @@ struct BadgePageView: View {
                         }
                     )
                 }
+                .clipped()
                 
             }.navigationBarHidden(true)
                 .edgesIgnoringSafeArea(.top)

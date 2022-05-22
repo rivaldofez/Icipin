@@ -22,6 +22,7 @@
 		7E11939C2838EADE00DAAC6C /* DetailBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */; };
 		7E11939E2838F51C00DAAC6C /* VerifiedQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */; };
 		7E1193A02838FF8700DAAC6C /* FailedQuestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */; };
+		7E1193C22839D6FB00DAAC6C /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193C12839D6FB00DAAC6C /* CustomColor.swift */; };
 		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBadgeView.swift; sourceTree = "<group>"; };
 		7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedQuestView.swift; sourceTree = "<group>"; };
 		7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedQuestPage.swift; sourceTree = "<group>"; };
+		7E1193C12839D6FB00DAAC6C /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		7E11938C28388A9C00DAAC6C /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				7E1193C12839D6FB00DAAC6C /* CustomColor.swift */,
 				7E11938D28388AB600DAAC6C /* Corners.swift */,
 			);
 			path = CustomView;
@@ -233,6 +236,7 @@
 				210DCDBE2832168C00A68637 /* ScanView.swift in Sources */,
 				7E11938E28388AB600DAAC6C /* Corners.swift in Sources */,
 				7E1193942838A5E300DAAC6C /* QuestData.swift in Sources */,
+				7E1193C22839D6FB00DAAC6C /* CustomColor.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
 				210DCDC928322E0A00A68637 /* ProfileImageMod.swift in Sources */,
 				210DCDC42832284B00A68637 /* YaBenar.swift in Sources */,

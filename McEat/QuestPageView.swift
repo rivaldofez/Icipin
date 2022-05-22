@@ -34,6 +34,7 @@ struct QuestPageView: View {
                         }
                         Button {
                             showSheetLocation = true
+                            print("Hello")
                         } label: {
                             Image(systemName: "chevron.down")
                                 .foregroundColor(CustomColor.white)
@@ -44,6 +45,7 @@ struct QuestPageView: View {
                                 VStack(alignment: .leading) {
                                     Text("Pilih Lokasi")
                                         .font(.system(.title2).bold())
+                                        .foregroundColor(.black)
                                     Divider()
                                     HStack() {
                                         Image(systemName: "infinity.circle")
@@ -54,6 +56,7 @@ struct QuestPageView: View {
                                         VStack(alignment: .leading) {
                                             Text("Lokasimu saat ini")
                                                 .font(.system(.title3).bold())
+                                                .foregroundColor(.black)
                                             Text("Jalan padang panjang No.6c Pasar Manggis Setiabudi Jakarta selatan")
                                                 .font(.system(.body))
                                                 .foregroundColor(CustomColor.gray)

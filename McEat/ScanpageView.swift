@@ -38,7 +38,7 @@ struct ScanpageView: View {
                     
                 
                 Spacer()
-                Text("Initializing")
+                Text(predict == nil ? "Gerakan Kamera Ke Makanan" : "Makanan Ditemukan!")
                     .font(.system(.title3).bold())
                     .foregroundColor(CustomColor.white)
                     .frame(width: UIScreen.main.bounds.width, height: 70)
@@ -55,6 +55,7 @@ struct ScanpageView: View {
                     if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML && timeRemaining < 10){
                         self.showVerifiedPage = true
                         self.failedPage = false
+                        self.timer.upstream.connect().cancel()
                     }
                 }
                 NavigationLink(destination: FailedQuestPage(), isActive: self.$showFailedPage){
@@ -63,6 +64,8 @@ struct ScanpageView: View {
                     if(timeRemaining == 0){
                         self.showFailedPage = true
                         self.showVerifiedPage = false
+                        self.timer.upstream.connect().cancel()
+
                     }
                 }
             }

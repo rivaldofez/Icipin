@@ -50,6 +50,21 @@ struct VerifiedQuestView: View {
                             Text("Story Food")
                                 .font(.system(.title2).bold())
                                 .foregroundColor(.white)
+                                .padding(.top, 15)
+                            
+                            HStack {
+                                VStack(alignment:.leading) {
+                                    Text("Soto Betawi")
+                                        .font(.system(.title).bold())
+                                        .foregroundColor(CustomColor.white)
+                                    
+                                    Text("Soto betawi adalah makanan skfd kshgld ksjgld  dkgjdks ldgkhd dskgj")
+                                        .font(.system(.body))
+                                        .foregroundColor(CustomColor.white)
+                                }
+                                
+                                Spacer()
+                            }.padding(.top, 20)
                             
                         }
                         .padding(.horizontal)

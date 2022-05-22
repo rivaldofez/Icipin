@@ -30,3 +30,10 @@ struct Predict: Identifiable {
     var confidence: Float
 }
 
+struct Story: Identifiable {
+    let id = UUID()
+    let title: String
+    let image: String
+    let story: String
+    
+}

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VerifiedQuestView: View {
     @State var questItem: QuestItem
+    let story = StoryData().storyData["soto_betawi"]
     
     //Gesture Properties
     @State var offset: CGFloat = 0
@@ -27,10 +28,10 @@ struct VerifiedQuestView: View {
                 Text("Kamu telah berhasil menjawab Questnya")
                     .font(.system(.body))
                     .foregroundColor(.black)
-                Image("soto_betawi")
+                Image(story?.image ?? "")
                     .resizable()
                     .frame(width: 200, height: 200)
-                Text(questItem.title)
+                Text(story?.title ?? "")
                     .font(.system(.title2).bold())
                     .foregroundColor(.black)
             }.padding(.top, isMidDrag ? 20 : 0)
@@ -58,11 +59,11 @@ struct VerifiedQuestView: View {
                             
                             HStack {
                                 VStack(alignment:.leading) {
-                                    Text(questItem.title)
+                                    Text(story?.title ?? "")
                                         .font(.system(.title).bold())
                                         .foregroundColor(CustomColor.white)
                                     
-                                    Text("Soto betawi adalah makanan skfd kshgld ksjgld  dkgjdks ldgkhd dskgj")
+                                    Text(story?.story ?? "")
                                         .font(.system(.body))
                                         .foregroundColor(CustomColor.white)
                                 }

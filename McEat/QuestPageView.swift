@@ -17,84 +17,83 @@ struct QuestPageView: View {
     @State var showSheetLocation: Bool = false
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack{
-                Color.white
-                VStack {
-                    ZStack{
-                        HStack {
-                            Image(systemName: "xmark")
+        ZStack{
+            Color.white
+            VStack {
+                ZStack{
+                    HStack {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.white)
+                        VStack(alignment:.leading) {
+                            Text("Lokasi Kamu")
+                                .font(.system(.caption))
                                 .foregroundColor(.white)
-                            VStack(alignment:.leading) {
-                                Text("Lokasi Kamu")
-                                    .font(.system(.caption))
-                                    .foregroundColor(.white)
-                                Text("Jakarta")
-                                    .font(.system(.body).bold())
-                                    .foregroundColor(.white)
-                            }
-                            Button {
-                                showSheetLocation = true
-                            } label: {
-                                Image(systemName: "chevron.down")
-                                    .foregroundColor(.white)
-                            }
-                            .halfSheet(showSheet: self.$showSheetLocation){
-                                ZStack{
-                                    Color.white
-                                    Text("Hello world")
-                                }.ignoresSafeArea()
-                            } onEnd: {
-                                print("Dismissed")
-                            }
-                            Spacer()
-                        }.padding(.leading, 20)
-                        
-                    }
-                    .frame(width: geo.size.width, height: 150)
-                    .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                            Text("Jakarta")
+                                .font(.system(.body).bold())
+                                .foregroundColor(.white)
+                        }
+                        Button {
+                            showSheetLocation = true
+                        } label: {
+                            Image(systemName: "chevron.down")
+                                .foregroundColor(.white)
+                        }
+                        .halfSheet(showSheet: self.$showSheetLocation){
+                            ZStack{
+                                Color.white
+                                Text("Hello world")
+                            }.ignoresSafeArea()
+                        } onEnd: {
+                            print("Dismissed")
+                        }
+                        Spacer()
+                    }.padding(.leading, 20)
                     
-                    Text("Choose your Quest")
-                        .font(.headline.bold())
-                        .foregroundColor(.black)
-                        .frame(width: 250, height: 60)
-                        .background(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .offset(x: 0, y: -40)
-                        .padding(.bottom, -40)
-                    
-                    ScrollView(.vertical, showsIndicators: false){
-                        LazyVGrid(columns: columnGrid, spacing: 20){
-                            ForEach(QuestData().questData, id: \.id) {quest in
-                                VStack{
-                                    HStack{
-                                        Text(quest.category)
-                                            .font(.system(.body).bold())
-                                            .foregroundColor(.black)
-                                            .padding(.leading, 20)
-                                        Spacer()
-                                    }
-                                    ScrollView(.horizontal, showsIndicators: false){
-                                        LazyHGrid(rows: rowGrid, spacing: 10){
-                                            ForEach(quest.questItem, id: \.id){questItem in
-                                                ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
-                                            }
+                }
+                .frame(width: UIScreen.main.bounds.size.width, height: 150)
+                .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                
+                Text("Choose your Quest")
+                    .font(.headline.bold())
+                    .foregroundColor(.black)
+                    .frame(width: 250, height: 60)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .offset(x: 0, y: -40)
+                    .padding(.bottom, -40)
+                
+                ScrollView(.vertical, showsIndicators: false){
+                    LazyVGrid(columns: columnGrid, spacing: 20){
+                        ForEach(QuestData().questData, id: \.id) {quest in
+                            VStack{
+                                HStack{
+                                    Text(quest.category)
+                                        .font(.system(.body).bold())
+                                        .foregroundColor(.black)
+                                        .padding(.leading, 20)
+                                    Spacer()
+                                }
+                                ScrollView(.horizontal, showsIndicators: false){
+                                    LazyHGrid(rows: rowGrid, spacing: 10){
+                                        ForEach(quest.questItem, id: \.id){questItem in
+                                            ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
                                         }
                                     }
-                                    Divider()
                                 }
+                                Divider()
                             }
                         }
-                        .background(
-                            NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
-                            }
-                        )
                     }
-                    .clipped()
-                }.navigationBarHidden(true)
-            }
-            .edgesIgnoringSafeArea(.top)
+                    .background(
+                        NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
+                        }
+                    )
+                }
+                .clipped()
+            }.navigationBarHidden(true)
         }
+        .edgesIgnoringSafeArea(.top)
+        
     }
 }
 
@@ -102,7 +101,7 @@ struct ItemQuest: View {
     @Binding var showDetailQuestPage : Bool
     @Binding var selectedQuestItem : QuestItem
     var questItem: QuestItem
-
+    
     
     var body: some View {
         let titleArr = questItem.title.components(separatedBy: " ")
@@ -144,7 +143,6 @@ extension View {
     
     func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping ()->()) -> some View{
         
-        
         //using overlay / background because we want use frame from swiftui
         return self
             .background(
@@ -179,13 +177,6 @@ struct HalfSheetHelper<SheetView: View> : UIViewControllerRepresentable{
             
             uiViewController.present(sheetController, animated: true)
             
-            
-//            uiViewController.present(sheetController, animated: true){
-//                // toggling show state
-//                DispatchQueue.main.async {
-//                    self.showSheet.toggle()
-//                }
-//            }
         }else{
             //closing view when showsheet toggled again
             uiViewController.dismiss(animated: true)
@@ -211,12 +202,11 @@ class CustomHostingController<Content: View>: UIHostingController<Content> {
         //setting presentation controller properties
         
         view.backgroundColor = .clear
-        
         if let presentationController = presentationController as? UISheetPresentationController {
             presentationController.detents = [
                 .medium(),
                 .large()
-            
+                
             ]
             
             //showing grab point

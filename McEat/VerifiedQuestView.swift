@@ -19,7 +19,7 @@ struct VerifiedQuestView: View {
     
     var body: some View {
         let story = StoryData.init().storyData[questItem.labelML]
-        questItem
+
         
         ZStack(alignment: isMidDrag ? .top : .center) {
             CustomColor.white

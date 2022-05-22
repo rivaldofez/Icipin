@@ -150,7 +150,7 @@ struct ItemQuest: View {
                     
                     HStack{
                         Text(titleArr[1])
-                            .font(.system(.title2).bold())
+                            .font(.system(.title3).bold())
                             .foregroundColor(CustomColor.white)
                         Spacer()
                     }

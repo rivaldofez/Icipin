@@ -19,9 +19,6 @@ struct VerifiedQuestView: View {
     
     
     var body: some View {
-        let story = StoryData.init().storyData[questItem.labelML]
-
-        
         VStack(alignment: .leading) {
             Button(action: {
                 showRoot = true
@@ -42,10 +39,10 @@ struct VerifiedQuestView: View {
                     Text("Kamu telah berhasil menjawab Questnya")
                         .font(.system(.body))
                         .foregroundColor(.black)
-                    Image(story?.image ?? "")
+                    Image(questItem.unlockQuest.image)
                         .resizable()
                         .frame(width: 200, height: 200)
-                    Text(story?.title ?? "")
+                    Text(questItem.unlockQuest.title)
                         .font(.system(.title2).bold())
                         .foregroundColor(.black)
                 }.padding(.top, isMidDrag ? 20 : 0)
@@ -73,11 +70,11 @@ struct VerifiedQuestView: View {
                                 
                                 HStack {
                                     VStack(alignment:.leading) {
-                                        Text(story?.title ?? "")
+                                        Text(questItem.unlockQuest.title)
                                             .font(.system(.title).bold())
                                             .foregroundColor(CustomColor.white)
                                         
-                                        Text(story?.story ?? "")
+                                        Text(questItem.unlockQuest.story)
                                             .font(.system(.body))
                                             .foregroundColor(CustomColor.white)
                                     }

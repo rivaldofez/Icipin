@@ -7,47 +7,6 @@
 
 import SwiftUI
 
-
-class StoryData {
-    var storyData = [String : Story]()
-    
-    init(){
-        storyData["soto_betawi"] = Story(title: "Soto Betawi", image: "pc_soto_betawi" ,story: "Soto Betawi merupakan soto yang khas dari daerah DKI Jakarta. Seperti halnya Soto Madura dan Soto Sulung, soto Betawi juga menggunakan jeroan. Selain jeroan, sering kali organ-organ lain juga disertakan, seperti mata, terpedo, dan juga hati. Daging sapi juga menjadi bahan campuran dalam soto Betawi.")
-        
-        storyData["kerak_telor"] = Story(title: "Kerak Telor", image: "pc_kerak_telor", story: "Kerak telur adalah makanan asli daerah Jakarta, dengan bahan-bahan beras ketan putih, telur ayam atau bebek, ebi yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai, cabai merah, kencur, jahe, merica butiran, garam dan gula pasir.")
-        
-        storyData["asinan_betawi"] = Story(title: "Kerak Telor", image: "pc_asinan_betawi", story: "Asinan khas Betawi aslinya hanya menggunakan bahan berupa sayur mayur, bukan buah seperti asinan Bogor. Asinan betawi juga dilengkapi dengan bumbu kacang dan kerupuk mie kuning. Asinan nikmat disantap pada siang hari. Kesegaran sayuran dan kuah bumbu kacangnya yang asam-pedas-manis-gurih terasa cetar di lidah.")
-        
-        storyData["roti_buaya"] = Story(title: "Roti Buaya", image: "pc_roti_buaya", story: "Roti buaya adalah hidangan Betawi berupa roti manis berbentuk buaya. Roti buaya senantiasa hadir dalam upacara pernikahan dan kenduri tradisional Betawi.")
-        
-        storyData["croffle"] = Story(title: "Croffle", image: "pc_croffle", story: "Croffle pada dasarnya adalah perkawinan antara croissant dan waffle. Lapisan kue yang terkelupas mengembang dan mengisi cetakan waffle dan mendapatkan tepi luar yang renyah dan sempurna. Croffle dibuat oleh koki pastry Irlandia dan akhirnya menjadi sangat populer di Korea dan juga Indonesia.")
-        
-        storyData["korean_garlic"] = Story(title: "Korean Garlic Bread", image: "pc_korean_garlic", story: "")
-        
-        storyData["kerak_telor"] = Story(title: "Kerak Telor", image: "pc_kerak_telor", story: "Street food Korea Selatan ini merupakan roti dengan topping krim keju yang disiram saus bawang putih. Sedikit berbeda, di sini aku memadukannya dengan topping cheese bechamel. Tentunya cocok dengan tekstur roti yang crunchy dan lembut. Makanan ini sempat viral di Indonesia beberapa waktu lalu")
-        
-        storyData["subway"] = Story(title: "Subway", image: "pc_subway", story: "Subway adalah waralaba restoran cepat saji multi-nasional Amerika yang terutama menjual sandwich, wraps, salad, dan minuman kapal selam. Subway didirikan oleh Fred DeLuca yang berusia 17 tahun dan dibiayai oleh Peter Buck pada tahun 1965 sebagai Kapal Selam Super Pete di Bridgeport, Connecticut. Subway sempat membuka restorannya di Indonesia pada tahun 1986, namun sempat tutup karena krisis moneter di tahun 1998. Kemudian baru-baru ini subway kembali membuka restorannya di Indonesia dan langsung viral karena digandrungi kawula muda Indonesia.")
-        
-        storyData["odeng"] = Story(title: "Odeng", image: "pc_odeng", story: "Odeng adalah camilan khas Korea, yang merupakan sate daging ikan, dimasak dengan kuah kaldu. Bentuknya seperti sate usus yang dililit pada sebuah tusuk sate. Odeng sempat viral di Indonesia karena pengaruh drama korea yang begitu kuat dikalangan remaja Indonesia.")
-        
-        storyData["sate_taichan"] = Story(title: "Sate Taichan", image: "pc_sate_taichan", story: "Sate taichan adalah sebuah varian sate yang berisi daging ayam yang dibakar tanpa baluran bumbu kacang atau kecap seperti sate pada umumnya. Sate ini hanya disajikan dengan sambal dan perasan jeruk nipis, sementara daging sate untuk sate taichan lazimnya berwarna putih polos dan hanya dibumbui garam, jeruk nipis, dan sedikit cabai. Sate ini dijual pada malam hari, lazimnya sate-sate pada umumnya.")
-        
-        storyData["gultik"] = Story(title: "Gultik", image: "pc_gultik", story: "Gultik merupakan singkatan dari gulai tikungan. Dinamakan gulai tikungan karena banyak pedagang gulai yang mangkal di tikungan jalan tersebut. Ada sekitar 15 pedagang gulai di kawasan belakang Blok M Plaza tersebut. Beberapa dari mereka sudah berjualan sejak puluhan tahun lalu. Rata-rata rasa dari gulai yang mereka jajakan pun tidak jauh berbeda.")
-        
-        storyData["oyster"] = Story(title: "Oyster", image: "pc_oyster", story: "Oyster atau disebut juga dengan tiram ialah moluska bivalvia yang hidup di perairan pantai beriklim sedang dan hangat.  Oyster merupakan tiram laut yang harganya termasuk mahal dibanding kerang yang biasa ditemui di pasaran.  Selain rasanya yang enak dan kaya manfaat, ukuran oyster juga mempengaruhi mahalnya harga oyster, khususnya di Indonesia.")
-        
-        storyData["haka_dimsum"] = Story(title: "Dimsum", image: "pc_haka_dimsum", story: "Dimsum adalah makanan ringan yang jadi bagian penting dari kuliner Tiongkok. Jenisnya sangat beragam, karena semua kue dan makanan pembuka bisa dikategorikan sebagai dimsum. Walaupun begitu, dimsum yang dikenal di negara-negara non-China biasanya lebih terbatas.")
-        
-        storyData["bir_pletok"] = Story(title: "Bir Pletok", image: "pc_bir_pletok", story: "Bir pletok merupakan minuman khas masyarakat Betawi yang sudah populer sejak zaman kolonial. Dibuat dari godokan 13 macam rempah yakni, jahe, jahe merah, sereh, kunyit, kayu secang, kayu manis, lada hitam, daun pandan, daun jeruk, biji pala, kapulaga, kembang lawang, serta cengkeh, ditambah gula dan garam.")
-        
-        storyData["es_ragusa"] = Story(title: "Es Ragusa", image: "pc_es_ragusa", story: "Ragusa Italian Ice Cream merupakan salah satu toko es krim legendaris dan tertua di Jakarta yang berdiri sejak 1932. Ragusa Italian Ice Cream didirkan oleh Ragusa bersaudara, yaitu orang asli Italia bernama Luigi Ragusa dan Vincenzo.  Toko es krim Ragusa mulanya hanya ada di Bandung. Namun, Ragusa kerap membuka lapak es krim melalui acara tahunan di Jakarta.")
-        
-        storyData["es_selendang"] = Story(title: "Kerak Telor", image: "pc_es_selendang", story: "Es selendang mayang adalah salah satu minuman tradisional Indonesia asal Jakarta. Minuman ini sekarang jarang ditemukan karena dikalangan masyarakat Betawi sendiri minuman ini dianggap minuman kuno. Di acara-acara tertentu seperti Lebaran Betawi, minuman ini disajikan dan sering disertai dengan label 'minuman Betawi jadul'. Selain menyegarkan, minuman ini dapat mengurangi rasa lapar karena dibuat dengan bahan dasar tepung beras. Beberapa penjual di kota tua membuat minuman ini dengan bahan dasar tepung hunkwedengan alasan lebih mudah dan efisien.")
-        
-        storyData["es_campur_betawi"] = Story(title: "Es Goyang", image: "pc_es_goyang", story: "Es yang memiliki dominan rasa santan atau variasi rasa coklat, kacang hijau dan strawberi dengan harga yang ekonomis, menjadikan es goyang favorit jajanan es di era 1980 hingga 1990-an. Lantaran cara membuatnya harus digoyang. Es goyang biasa dijual secara keliling menggunakan gerobak.")
-    }
-}
-
 class QuestData {
     var questData = [Quest]()
     
@@ -66,7 +25,8 @@ class QuestData {
                                         "menggunakan santan yang kental",
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Soto Betawi", image: "pc_soto_betawi" ,story: "Soto Betawi merupakan soto yang khas dari daerah DKI Jakarta. Seperti halnya Soto Madura dan Soto Sulung, soto Betawi juga menggunakan jeroan. Selain jeroan, sering kali organ-organ lain juga disertakan, seperti mata, terpedo, dan juga hati. Daging sapi juga menjadi bahan campuran dalam soto Betawi.")
+                                     ),
                             QuestItem(labelML: "kerak_telor", title: "Wajan Dibalik", image: "kerak_telor",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -77,7 +37,8 @@ class QuestData {
                                         "Biasa dijual ditempat wisata",
                                         "Menjadi ikon kuliner jakarta."
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_kerak_telor", story: "Kerak telur adalah makanan asli daerah Jakarta, dengan bahan-bahan beras ketan putih, telur ayam atau bebek, ebi yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai, cabai merah, kencur, jahe, merica butiran, garam dan gula pasir.")
+                                     ),
                             QuestItem(labelML: "asinan_betawi", title: "Kerupuk Mie", image: "asinan_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -88,7 +49,8 @@ class QuestData {
                                         "Kuah bumbu kacang yang memiliki rasa asam pedas dan manis",
                                         "Dilengkapi dengan kerupuk mie kuning yang khas"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_asinan_betawi", story: "Asinan khas Betawi aslinya hanya menggunakan bahan berupa sayur mayur, bukan buah seperti asinan Bogor. Asinan betawi juga dilengkapi dengan bumbu kacang dan kerupuk mie kuning. Asinan nikmat disantap pada siang hari. Kesegaran sayuran dan kuah bumbu kacangnya yang asam-pedas-manis-gurih terasa cetar di lidah.")
+                                     ),
                             QuestItem(labelML: "roti_buaya", title: "Roti Playboy", image: "roti_buaya",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -99,7 +61,8 @@ class QuestData {
                                         "Melambangkan kesetiaan",
                                         "Memiliki filosofi kehidupan baru dalam prosesi pernikahan"
                                       ],
-                                      isUnlock: false)
+                                      unlockQuest: UnlockQuest(title: "Roti Buaya", image: "pc_roti_buaya", story: "Roti buaya adalah hidangan Betawi berupa roti manis berbentuk buaya. Roti buaya senantiasa hadir dalam upacara pernikahan dan kenduri tradisional Betawi.")
+                                    )
                         ]
                       
                 ),
@@ -115,7 +78,8 @@ class QuestData {
                                         "Dibuat menggunakan berbagai macam rempah,",
                                         "Bisa disajikan dingin atau hangat"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Bir Pletok", image: "pc_bir_pletok", story: "Bir pletok merupakan minuman khas masyarakat Betawi yang sudah populer sejak zaman kolonial. Dibuat dari godokan 13 macam rempah yakni, jahe, jahe merah, sereh, kunyit, kayu secang, kayu manis, lada hitam, daun pandan, daun jeruk, biji pala, kapulaga, kembang lawang, serta cengkeh, ditambah gula dan garam.")
+                                     ),
                             QuestItem(labelML: "es_ragusa", title: "Es Colloseum", image: "es_ragusa",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -126,7 +90,8 @@ class QuestData {
                                         "Resepnya turun-temurun sampai sekarang",
                                         "Kedai berada di jalan veteran jakarta"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Es Ragusa", image: "pc_es_ragusa", story: "Ragusa Italian Ice Cream merupakan salah satu toko es krim legendaris dan tertua di Jakarta yang berdiri sejak 1932. Ragusa Italian Ice Cream didirkan oleh Ragusa bersaudara, yaitu orang asli Italia bernama Luigi Ragusa dan Vincenzo.  Toko es krim Ragusa mulanya hanya ada di Bandung. Namun, Ragusa kerap membuka lapak es krim melalui acara tahunan di Jakarta.")
+                                     ),
                             QuestItem(labelML: "es_selendang", title: "Selendang Dingin", image: "es_selendang",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -137,7 +102,8 @@ class QuestData {
                                         "Namanya terinspirasi dari bentuknya yang panjang dan memiliki 3 warna seperti selendang",
                                         "3 warnanya mewakili 3 etnis masyarakat Jakarta yaitu Merah (Tionghoa), Kuning (Melayu) dan Hijau (Arab)"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_es_selendang", story: "Es selendang mayang adalah salah satu minuman tradisional Indonesia asal Jakarta. Minuman ini sekarang jarang ditemukan karena dikalangan masyarakat Betawi sendiri minuman ini dianggap minuman kuno. Di acara-acara tertentu seperti Lebaran Betawi, minuman ini disajikan dan sering disertai dengan label 'minuman Betawi jadul'. Selain menyegarkan, minuman ini dapat mengurangi rasa lapar karena dibuat dengan bahan dasar tepung beras. Beberapa penjual di kota tua membuat minuman ini dengan bahan dasar tepung hunkwedengan alasan lebih mudah dan efisien.")
+                                     ),
                             QuestItem(labelML: "es_campur_betawi", title: "Es Dangdut", image: "es_campur_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -148,7 +114,8 @@ class QuestData {
                                         "Cara membuatnya unik yaitu digoyang-goyangkan diatas gerobak",
                                         "Biasa dijual dengan berkeliling menggunakan gerobak"
                                       ],
-                                      isUnlock: false)
+                                      unlockQuest: UnlockQuest(title: "Es Goyang", image: "pc_es_goyang", story: "Es yang memiliki dominan rasa santan atau variasi rasa coklat, kacang hijau dan strawberi dengan harga yang ekonomis, menjadikan es goyang favorit jajanan es di era 1980 hingga 1990-an. Lantaran cara membuatnya harus digoyang. Es goyang biasa dijual secara keliling menggunakan gerobak.")
+                                     )
                         ]
                       
                 ),
@@ -164,7 +131,8 @@ class QuestData {
                                         "Bahan dasarnya adalah roti yang berasal dari Austria namun populer di Perancis",
                                         "Menggunakan cetakan khusus untuk memasaknya"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Croffle", image: "pc_croffle", story: "Croffle pada dasarnya adalah perkawinan antara croissant dan waffle. Lapisan kue yang terkelupas mengembang dan mengisi cetakan waffle dan mendapatkan tepi luar yang renyah dan sempurna. Croffle dibuat oleh koki pastry Irlandia dan akhirnya menjadi sangat populer di Korea dan juga Indonesia.")
+                                     ),
                             QuestItem(labelML: "korean_garlic", title: "Roti Korea", image: "korean_garlic",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -175,7 +143,8 @@ class QuestData {
                                         "Menggunakan bahan dasar keju dan garlic",
                                         "Renyah diluar, lembut didalam"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Korean Garlic Bread", image: "pc_korean_garlic", story: "Street food Korea Selatan ini merupakan roti dengan topping krim keju yang disiram saus bawang putih. Sedikit berbeda, di sini aku memadukannya dengan topping cheese bechamel. Tentunya cocok dengan tekstur roti yang crunchy dan lembut. Makanan ini sempat viral di Indonesia beberapa waktu lalu.")
+                                     ),
                             QuestItem(labelML: "subway", title: "Sandwich Kereta", image: "subway",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -186,7 +155,8 @@ class QuestData {
                                         "Memiliki franchise terbesar di dunia",
                                         "Sangat terkenal dibidang franchise sandwich"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Subway", image: "pc_subway", story: "Subway adalah waralaba restoran cepat saji multi-nasional Amerika yang terutama menjual sandwich, wraps, salad, dan minuman kapal selam. Subway didirikan oleh Fred DeLuca yang berusia 17 tahun dan dibiayai oleh Peter Buck pada tahun 1965 sebagai Kapal Selam Super Pete di Bridgeport, Connecticut. Subway sempat membuka restorannya di Indonesia pada tahun 1986, namun sempat tutup karena krisis moneter di tahun 1998. Kemudian baru-baru ini subway kembali membuka restorannya di Indonesia dan langsung viral karena digandrungi kawula muda Indonesia.")
+                                     ),
                             QuestItem(labelML: "odeng", title: "Fishcake Tusuk", image: "odeng",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -197,7 +167,8 @@ class QuestData {
                                         "Penyajiannya dilipat menggunakan tusuk sate lengkap dengan kuahnya",
                                         "Sempat viral di tiktok dan dijual di minimarket jepang"
                                       ],
-                                      isUnlock: false)
+                                      unlockQuest: UnlockQuest(title: "Odeng", image: "pc_odeng", story: "Odeng adalah camilan khas Korea, yang merupakan sate daging ikan, dimasak dengan kuah kaldu. Bentuknya seperti sate usus yang dililit pada sebuah tusuk sate. Odeng sempat viral di Indonesia karena pengaruh drama korea yang begitu kuat dikalangan remaja Indonesia.")
+                                     )
                         ]
                 ),
                 Quest(category: "Makanan Recommended", questItem:
@@ -212,7 +183,9 @@ class QuestData {
                                         "Garam dan sambal matah sebagai bumbunya",
                                         "Biasa dijual di daerah senayan"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Sate Taichan", image: "pc_sate_taichan", story: "Sate taichan adalah sebuah varian sate yang berisi daging ayam yang dibakar tanpa baluran bumbu kacang atau kecap seperti sate pada umumnya. Sate ini hanya disajikan dengan sambal dan perasan jeruk nipis, sementara daging sate untuk sate taichan lazimnya berwarna putih polos dan hanya dibumbui garam, jeruk nipis, dan sedikit cabai. Sate ini dijual pada malam hari, lazimnya sate-sate pada umumnya.")
+                                     
+                                     ),
                             QuestItem(labelML: "gultik", title: "Makanan Tikungan", image: "gultik",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -223,7 +196,8 @@ class QuestData {
                                         "Disajikan dengan porsi yang kecil",
                                         "Biasa dijual didaerah blok M"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Gultik", image: "pc_gultik", story: "Gultik merupakan singkatan dari gulai tikungan. Dinamakan gulai tikungan karena banyak pedagang gulai yang mangkal di tikungan jalan tersebut. Ada sekitar 15 pedagang gulai di kawasan belakang Blok M Plaza tersebut. Beberapa dari mereka sudah berjualan sejak puluhan tahun lalu. Rata-rata rasa dari gulai yang mereka jajakan pun tidak jauh berbeda.")
+                                     ),
                             QuestItem(labelML: "oyster", title: "Kerang Mr.Bean", image: "oyster",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -234,7 +208,8 @@ class QuestData {
                                         "Biasanya dimakan dengan cara langsung tanpa dikunyah terlebih dahulu",
                                         "Dijual disebuah kedai di PIK (Pantai Indah Kapuk)"
                                       ],
-                                      isUnlock: false),
+                                      unlockQuest: UnlockQuest(title: "Oyster", image: "pc_oyster", story: "Oyster atau disebut juga dengan tiram ialah moluska bivalvia yang hidup di perairan pantai beriklim sedang dan hangat.  Oyster merupakan tiram laut yang harganya termasuk mahal dibanding kerang yang biasa ditemui di pasaran.  Selain rasanya yang enak dan kaya manfaat, ukuran oyster juga mempengaruhi mahalnya harga oyster, khususnya di Indonesia.")
+                                     ),
                             QuestItem(labelML: "haka_dimsum", title: "Siomay Tiongkok", image: "haka_dimsum",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
@@ -245,7 +220,8 @@ class QuestData {
                                         "Jajanan pinggir jalan yang populer",
                                         "Dijual di sebuah kedai di daerah Melawai, Jakarta selatan"
                                       ],
-                                      isUnlock: false)
+                                      unlockQuest: UnlockQuest(title: "Dimsum", image: "pc_haka_dimsum", story: "Dimsum adalah makanan ringan yang jadi bagian penting dari kuliner Tiongkok. Jenisnya sangat beragam, karena semua kue dan makanan pembuka bisa dikategorikan sebagai dimsum. Walaupun begitu, dimsum yang dikenal di negara-negara non-China biasanya lebih terbatas.")
+                                     )
                         ]
                 )
             ]

@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct McEatApp: App {
+    let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
 //            QuestPageView()
 //            DetailQuestView(questItem: QuestData().questData[0].questItem[0])
             MainView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//                .environment(\.managedObjectContext, dataController.container.viewContext)
 //            NavigationView {
 //                ScanpageView(questItem: QuestData().questData[0].questItem[0])
 //            }

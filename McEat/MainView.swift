@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    let persistenceController = PersistenceController.shared
     
     init() {
         UITabBar.appearance().barTintColor = UIColor.red
@@ -19,7 +20,7 @@ struct MainView: View {
                 QuestPageView()
                     .tabItem{
                         Label("Quest", systemImage: "house.fill")
-                    }
+                    }.environment(\.managedObjectContext, persistenceController.container.viewContext)
                 
                 BadgePageView()
                     .tabItem{

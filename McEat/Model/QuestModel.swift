@@ -14,7 +14,7 @@ struct QuestItem: Identifiable {
     let image: String
     let color: [Color]
     var clue: [String]
-    var isUnlock: Bool
+    let unlockQuest: UnlockQuest
 }
 
 
@@ -30,7 +30,7 @@ struct Predict: Identifiable {
     var confidence: Float
 }
 
-struct Story: Identifiable {
+struct UnlockQuest: Identifiable {
     let id = UUID()
     let title: String
     let image: String

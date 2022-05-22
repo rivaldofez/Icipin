@@ -23,20 +23,20 @@ struct QuestPageView: View {
                 ZStack{
                     HStack {
                         Image(systemName: "xmark")
-                            .foregroundColor(.white)
+                            .foregroundColor(CustomColor.white)
                         VStack(alignment:.leading) {
                             Text("Lokasi Kamu")
                                 .font(.system(.caption))
-                                .foregroundColor(.white)
+                                .foregroundColor(CustomColor.white)
                             Text("Jakarta")
                                 .font(.system(.body).bold())
-                                .foregroundColor(.white)
+                                .foregroundColor(CustomColor.white)
                         }
                         Button {
                             showSheetLocation = true
                         } label: {
                             Image(systemName: "chevron.down")
-                                .foregroundColor(.white)
+                                .foregroundColor(CustomColor.white)
                         }
                         .halfSheet(showSheet: self.$showSheetLocation){
                             ZStack{
@@ -51,7 +51,7 @@ struct QuestPageView: View {
                     
                 }
                 .frame(width: UIScreen.main.bounds.size.width, height: 150)
-                .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                .background(RadialCorners(radGrad: RadialGradient(colors: [CustomColor.secondary, CustomColor.primary], center: .center, startRadius: 0, endRadius: 200), tl: 0, tt: 0, bl: 70, bt: 70))
                 
                 Text("Choose your Quest")
                     .font(.headline.bold())
@@ -119,14 +119,14 @@ struct ItemQuest: View {
                     HStack{
                         Text(titleArr[0])
                             .font(.system(.subheadline))
-                            .foregroundColor(.white)
+                            .foregroundColor(CustomColor.white)
                         Spacer()
                     }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     
                     HStack{
                         Text(titleArr[1])
                             .font(.system(.title2).bold())
-                            .foregroundColor(.white)
+                            .foregroundColor(CustomColor.white)
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 25, trailing: 0))

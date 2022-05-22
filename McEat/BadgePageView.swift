@@ -19,7 +19,7 @@ struct BadgePageView: View {
                 ZStack{
                 }
                 .frame(width: geo.size.width, height: 150)
-                .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                .background(RadialCorners(radGrad: RadialGradient(colors: [CustomColor.secondary, CustomColor.primary], center: .center, startRadius: 0, endRadius: 200), tl: 0, tt: 0, bl: 70, bt: 70))
                 
                 
                 Text("Badges")

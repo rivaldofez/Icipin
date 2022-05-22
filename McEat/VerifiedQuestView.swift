@@ -9,7 +9,6 @@ import SwiftUI
 
 struct VerifiedQuestView: View {
     @State var questItem: QuestItem
-    let story = StoryData().storyData["soto_betawi"]
     
     //Gesture Properties
     @State var offset: CGFloat = 0
@@ -19,6 +18,9 @@ struct VerifiedQuestView: View {
     
     
     var body: some View {
+        let story = StoryData.init().storyData[questItem.labelML]
+        questItem
+        
         ZStack(alignment: isMidDrag ? .top : .center) {
             CustomColor.white
             VStack {

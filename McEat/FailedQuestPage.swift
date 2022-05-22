@@ -35,6 +35,7 @@ struct FailedQuestPage: View {
                         .font(.system(.body).bold())
                         .foregroundColor(CustomColor.white)
                 }
+                
                 .frame(width: 150, height: 50)
                 .background(CustomColor.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 10))

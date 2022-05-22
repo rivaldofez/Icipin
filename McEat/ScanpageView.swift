@@ -10,6 +10,7 @@ import AVKit
 import Vision
 
 struct ScanpageView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @State var questItem: QuestItem
     @State var timeRemaining = 15
     @State var isShow = false
@@ -18,9 +19,11 @@ struct ScanpageView: View {
     @State var showFailedPage = false
     @State var failedPage = false
     @State var predict : Predict? = nil
+    @FetchRequest(sortDescriptors: []) var questPersist: FetchedResults<QuestPersistence>
     
     var body: some View {
         //call UIKit VC
+        let allDictQuest = Dictionary(grouping: questPersist, by: {quest in quest.labelML})
         ZStack{
             ScanPageCustomView(predict: self.$predict)
             VStack {
@@ -33,6 +36,17 @@ struct ScanpageView: View {
                         .background(CustomColor.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                 }.padding(.top, 50)
+                NavigationLink(destination: FailedQuestPage(), isActive: self.$showFailedPage){
+                }
+                .onReceive(timer){_ in
+                    if(timeRemaining == 0){
+                        self.timer.upstream.connect().cancel()
+                        self.showFailedPage = true
+                        self.showVerifiedPage = false
+                        
+
+                    }
+                }
                 
                 Spacer()
                 Text(predict == nil ? "Gerakan Kamera Ke Makanan" : "Makanan Ditemukan!")
@@ -53,18 +67,12 @@ struct ScanpageView: View {
                         self.showVerifiedPage = true
                         self.failedPage = false
                         self.timer.upstream.connect().cancel()
+                        
+//                        PersistenceController().update(questItem: questItem, id: allDictQuest[questItem.labelML]?[0].id ?? UUID())
                     }
                 }
-                NavigationLink(destination: FailedQuestPage(), isActive: self.$showFailedPage){
-                }
-                .onReceive(timer){_ in
-                    if(timeRemaining == 0){
-                        self.showFailedPage = true
-                        self.showVerifiedPage = false
-                        self.timer.upstream.connect().cancel()
-
-                    }
-                }
+                
+                
             }
             Image("scan_placeholder")
                 .resizable()

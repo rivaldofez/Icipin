@@ -22,8 +22,8 @@ struct QuestPageView: View {
     var body: some View {
 //        let dictByKeyVersionOne = Dictionary(grouping: studentArray, by: {student in student.classId})
         let allDictQuest = Dictionary(grouping: questPersist, by: {quest in quest.labelML})
-        let keys = allDictQuest.map{$0.key}
-        let values = allDictQuest.map {$0.value}
+//        let keys = allDictQuest.map{$0.key}
+//        let values = allDictQuest.map {$0.value}
         
         ZStack{
             Color.white
@@ -96,6 +96,7 @@ struct QuestPageView: View {
                         for questData in QuestData.init().questData {
                             for questItem in questData.questItem {
                                 let newQuestPersistence = QuestPersistence(context: viewContext)
+                                newQuestPersistence.id = UUID()
                                 newQuestPersistence.isUnlock = false
                                 newQuestPersistence.labelML = questItem.labelML
                             }

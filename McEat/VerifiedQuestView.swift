@@ -9,13 +9,13 @@ import SwiftUI
 
 struct VerifiedQuestView: View {
     @State var questItem: QuestItem
-    
     //Gesture Properties
     @State var offset: CGFloat = 0
     @State var lastOffset: CGFloat = 0
     @GestureState var gestureOffset: CGFloat = 0
     @State var isMidDrag: Bool = false
     @State var showRoot: Bool = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
     var body: some View {
@@ -123,6 +123,7 @@ struct VerifiedQuestView: View {
             }
         }
         .navigationBarHidden(true)
+
     }
     
     func onChange(){

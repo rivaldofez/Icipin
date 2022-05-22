@@ -47,12 +47,13 @@ struct DetailQuestView: View {
                     }
                     .frame(width: geo.size.width, height: 85)
                     .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 40, bt: 40))
-                    NavigationLink(destination: ScanpageView(questItem: questItem), isActive: self.$showScanPage){
-                    }
+                    
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
             .edgesIgnoringSafeArea(.bottom)
+        }
+        NavigationLink(destination: ScanpageView(questItem: questItem), isActive: self.$showScanPage){
         }
     }
 }

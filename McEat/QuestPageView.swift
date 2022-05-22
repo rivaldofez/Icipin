@@ -18,80 +18,82 @@ struct QuestPageView: View {
     
     var body: some View {
         GeometryReader { geo in
-                    VStack {
-                        ZStack{
-                            HStack {
-                                Image(systemName: "xmark")
+            ZStack{
+                Color.white
+                VStack {
+                    ZStack{
+                        HStack {
+                            Image(systemName: "xmark")
+                                .foregroundColor(.white)
+                            VStack(alignment:.leading) {
+                                Text("Lokasi Kamu")
+                                    .font(.system(.caption))
                                     .foregroundColor(.white)
-                                VStack(alignment:.leading) {
-                                    Text("Lokasi Kamu")
-                                        .font(.system(.caption))
-                                        .foregroundColor(.white)
-                                    Text("Jakarta")
-                                        .font(.system(.body).bold())
-                                        .foregroundColor(.white)
-                                }
-                                Button {
-                                    showSheetLocation = true
-                                } label: {
-                                    Image(systemName: "chevron.down")
-                                        .foregroundColor(.white)
-                                }
-                                .halfSheet(showSheet: self.$showSheetLocation){
-                                    ZStack{
-                                        Color.white
-                                        Text("Hello world")
-                                    }.ignoresSafeArea()
-                                } onEnd: {
-                                    print("Dismissed")
-                                }
-                                Spacer()
-                            }.padding(.leading, 20)
-                            
-                        }
-                        .frame(width: geo.size.width, height: 150)
-                        .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                                Text("Jakarta")
+                                    .font(.system(.body).bold())
+                                    .foregroundColor(.white)
+                            }
+                            Button {
+                                showSheetLocation = true
+                            } label: {
+                                Image(systemName: "chevron.down")
+                                    .foregroundColor(.white)
+                            }
+                            .halfSheet(showSheet: self.$showSheetLocation){
+                                ZStack{
+                                    Color.white
+                                    Text("Hello world")
+                                }.ignoresSafeArea()
+                            } onEnd: {
+                                print("Dismissed")
+                            }
+                            Spacer()
+                        }.padding(.leading, 20)
                         
-                        Text("Choose your Quest")
-                            .font(.headline.bold())
-                            .foregroundColor(.black)
-                            .frame(width: 250, height: 60)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .offset(x: 0, y: -40)
-                        
-                        ScrollView(.vertical, showsIndicators: false){
-                            LazyVGrid(columns: columnGrid, spacing: 20){
-                                ForEach(QuestData().questData, id: \.id) {quest in
-                                    VStack{
-                                        HStack{
-                                            Text(quest.category)
-                                                .font(.system(.body).bold())
-                                                .foregroundColor(.black)
-                                                .padding(.leading, 20)
-                                            Spacer()
-                                        }
-                                        ScrollView(.horizontal, showsIndicators: false){
-                                            LazyHGrid(rows: rowGrid, spacing: 10){
-                                                ForEach(quest.questItem, id: \.id){questItem in
-                                                    ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
-                                                }
+                    }
+                    .frame(width: geo.size.width, height: 150)
+                    .background(Corners(color: .red, tl: 0, tt: 0, bl: 80, bt: 80))
+                    
+                    Text("Choose your Quest")
+                        .font(.headline.bold())
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 60)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .offset(x: 0, y: -40)
+                        .padding(.bottom, -40)
+                    
+                    ScrollView(.vertical, showsIndicators: false){
+                        LazyVGrid(columns: columnGrid, spacing: 20){
+                            ForEach(QuestData().questData, id: \.id) {quest in
+                                VStack{
+                                    HStack{
+                                        Text(quest.category)
+                                            .font(.system(.body).bold())
+                                            .foregroundColor(.black)
+                                            .padding(.leading, 20)
+                                        Spacer()
+                                    }
+                                    ScrollView(.horizontal, showsIndicators: false){
+                                        LazyHGrid(rows: rowGrid, spacing: 10){
+                                            ForEach(quest.questItem, id: \.id){questItem in
+                                                ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem)
                                             }
                                         }
-                                        Divider()
                                     }
+                                    Divider()
                                 }
                             }
-                            .background(
-                                NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
-                                }
-                            )
                         }
-                        .offset(x:0, y:-40)
-                    }.navigationBarHidden(true)
-                        .edgesIgnoringSafeArea(.top)
-                
-                
+                        .background(
+                            NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
+                            }
+                        )
+                    }
+                    .clipped()
+                }.navigationBarHidden(true)
+            }
+            .edgesIgnoringSafeArea(.top)
         }
     }
 }
@@ -200,7 +202,7 @@ struct HalfSheetHelper<SheetView: View> : UIViewControllerRepresentable{
         
         func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
             parent.showSheet = false
-            parent.onEnd
+            parent.onEnd()
         }
     }
 }

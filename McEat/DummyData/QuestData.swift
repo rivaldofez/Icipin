@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+
+class LabelData {
+    var labelML = [String]()
+    
+    init(){
+        labelML.append(contentsOf: [
+            "asinan_betawi",
+            "bir_pletok",
+            "croffle",
+            "es_campur_betawi",
+            "es_ragusa",
+            "es_selendang",
+            "gultik",
+            "haka_dimsum",
+            "kerak_telor",
+            "korean_garlic",
+            "odeng",
+            "oyster",
+            "roti_buaya",
+            "sate_taichan",
+            "semur_jengkol",
+            "soto_betawi",
+            "subway"
+        ])
+    }
+}
+
 class QuestData {
     var questData = [Quest]()
     

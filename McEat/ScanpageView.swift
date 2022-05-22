@@ -14,26 +14,34 @@ struct ScanpageView: View {
     @State var isShow = false
     @State var prediction = "0"
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State var showVarifiedPage = false
+    @State var failedPage = false
     var body: some View {
         //call UIKit VC
-        
         ZStack{
             ScanPageCustomView(prediction: self.$prediction)
-            
             VStack {
-                Text(prediction)
-                if(Float(prediction)! > 0.8 && timeRemaining > 0){
-                   Text("Hello")
-                }else{
-                   Text("Tidak Hello")
-                }
-                Text("\(timeRemaining)")
+//                Text(prediction)
+//                if(Float(prediction)! > 0.8 && timeRemaining > 0){
+//                   Text("Hello")
+//                }else{
+//                   Text("Tidak Hello")
+//                }
+//                Text("\(timeRemaining)")
+                Spacer()
+                Text("Initializing")
+                    .font(.system(.title3).bold())
+                    .foregroundColor(CustomColor.white)
+                    .frame(width: UIScreen.main.bounds.width, height: 70)
+                    .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 0, bt: 0))
             }
-        }.onReceive(timer) { _ in
-            if timeRemaining > 0 {
-                timeRemaining -= 1
-            }
-        }
+        }.edgesIgnoringSafeArea(.bottom)
+//        .onReceive(timer) { _ in
+//            if timeRemaining > 0 {
+//                timeRemaining -= 1
+//            }
+//        }
     }
 }
 

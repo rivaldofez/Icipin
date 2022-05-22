@@ -24,21 +24,17 @@ struct ScanpageView: View {
         ZStack{
             ScanPageCustomView(predict: self.$predict)
             VStack {
-//                Text(prediction)
-//                if(Float(prediction)! > 0.8 && timeRemaining > 0){
-//                   Text("Hello")
-//                }else{
-//                   Text("Tidak Hello")
-//                }
-//                Text("\(timeRemaining)")
                 
-                
-                
-                    
+                HStack{
+                    Text("Scan dalam : \(timeRemaining)")
+                        .font(.system(.title2))
+                        .foregroundColor(.black)
+                        .padding(10)
+                        .background(CustomColor.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                }.padding(.top, 50)
                 
                 Spacer()
-                Text(predict?.label ?? "")
-                Text("\(predict?.confidence ?? 0.0)")
                 Text(predict == nil ? "Gerakan Kamera Ke Makanan" : "Makanan Ditemukan!")
                     .font(.system(.title3).bold())
                     .foregroundColor(CustomColor.white)
@@ -50,10 +46,10 @@ struct ScanpageView: View {
                         }
                     }
                 
-                NavigationLink(destination: VerifiedQuestView(), isActive: self.$showVerifiedPage){
+                NavigationLink(destination: VerifiedQuestView(questItem: questItem), isActive: self.$showVerifiedPage){
                 }
                 .onReceive(timer){_ in
-                    if(predict?.confidence ?? 0 > 0.8 && predict?.label == questItem.labelML && timeRemaining < 10){
+                    if(predict?.confidence ?? 0 > 0.7 && predict?.label == questItem.labelML && timeRemaining < 12){
                         self.showVerifiedPage = true
                         self.failedPage = false
                         self.timer.upstream.connect().cancel()
@@ -70,13 +66,14 @@ struct ScanpageView: View {
                     }
                 }
             }
+            Image("scan_placeholder")
+                .resizable()
+                .frame(width: 300, height: 300)
+                .foregroundColor(.gray.opacity(0.5))
             
-        }.ignoresSafeArea()
-//        .onReceive(timer) { _ in
-//            if timeRemaining > 0 {
-//                timeRemaining -= 1
-//            }
-//        }
+        }
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 
@@ -85,7 +82,6 @@ protocol CustomDelegate {
 }
 
 struct ScanPageCustomView: UIViewControllerRepresentable {
-//    @Binding var prediction: String
     @Binding var predict : Predict?
     
     func makeUIViewController(context: Context) -> some UIViewController {
@@ -110,7 +106,6 @@ struct ScanPageCustomView: UIViewControllerRepresentable {
         
         func didUpdateWithValue(_ value: Predict?) {
             parent.predict = value
-//            parent.prediction = value
         }
     }
 }

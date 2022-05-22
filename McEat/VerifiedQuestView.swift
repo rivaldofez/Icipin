@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct VerifiedQuestView: View {
+    @State var questItem: QuestItem
+    
     //Gesture Properties
     @State var offset: CGFloat = 0
     @State var lastOffset: CGFloat = 0
@@ -22,14 +24,15 @@ struct VerifiedQuestView: View {
                 Text("CONGRATULATIONS")
                     .font(.system(.title2).bold())
                     .foregroundColor(.black)
-                Text("Kamu telah berhasi; menjawab Questnya")
+                Text("Kamu telah berhasil menjawab Questnya")
                     .font(.system(.body))
                     .foregroundColor(.black)
                 Image("soto_betawi")
                     .resizable()
                     .frame(width: 200, height: 200)
-                Text("Soto Betawi")
+                Text(questItem.title)
                     .font(.system(.title2).bold())
+                    .foregroundColor(.black)
             }.padding(.top, isMidDrag ? 20 : 0)
             
             GeometryReader { geo -> AnyView in
@@ -55,7 +58,7 @@ struct VerifiedQuestView: View {
                             
                             HStack {
                                 VStack(alignment:.leading) {
-                                    Text("Soto Betawi")
+                                    Text(questItem.title)
                                         .font(.system(.title).bold())
                                         .foregroundColor(CustomColor.white)
                                     
@@ -124,7 +127,7 @@ struct VerifiedQuestView: View {
 
 struct VerifiedQuestView_Previews: PreviewProvider {
     static var previews: some View {
-        VerifiedQuestView()
+        VerifiedQuestView(questItem: QuestData().questData[0].questItem[0])
     }
 }
 

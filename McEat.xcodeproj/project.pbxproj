@@ -17,6 +17,8 @@
 		7E11939E2838F51C00DAAC6C /* VerifiedQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */; };
 		7E1193A02838FF8700DAAC6C /* FailedQuestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */; };
 		7E1193C22839D6FB00DAAC6C /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193C12839D6FB00DAAC6C /* CustomColor.swift */; };
+		7E1193E3283A3A5900DAAC6C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193E2283A3A5900DAAC6C /* Persistence.swift */; };
+		7E1193E6283A3A6C00DAAC6C /* McEat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E1193E4283A3A6C00DAAC6C /* McEat.xcdatamodeld */; };
 		7E8223A6282FD6B200B7B767 /* McEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8223A5282FD6B200B7B767 /* McEatApp.swift */; };
 		7E8223AA282FD6B300B7B767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223A9282FD6B300B7B767 /* Assets.xcassets */; };
 		7E8223AD282FD6B300B7B767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8223AC282FD6B300B7B767 /* Preview Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiedQuestView.swift; sourceTree = "<group>"; };
 		7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedQuestPage.swift; sourceTree = "<group>"; };
 		7E1193C12839D6FB00DAAC6C /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		7E1193E2283A3A5900DAAC6C /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7E1193E5283A3A6C00DAAC6C /* McEat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = McEat.xcdatamodel; sourceTree = "<group>"; };
 		7E8223A2282FD6B200B7B767 /* McEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8223A5282FD6B200B7B767 /* McEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McEatApp.swift; sourceTree = "<group>"; };
 		7E8223A9282FD6B300B7B767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,7 +118,9 @@
 				7E11939B2838EADE00DAAC6C /* DetailBadgeView.swift */,
 				7E11939D2838F51C00DAAC6C /* VerifiedQuestView.swift */,
 				7E11939F2838FF8700DAAC6C /* FailedQuestPage.swift */,
+				7E1193E2283A3A5900DAAC6C /* Persistence.swift */,
 				7E8223A9282FD6B300B7B767 /* Assets.xcassets */,
+				7E1193E4283A3A6C00DAAC6C /* McEat.xcdatamodeld */,
 				7E998CDA2837798200E00DB9 /* McEatDetector.mlmodel */,
 				7E8223AB282FD6B300B7B767 /* Preview Content */,
 			);
@@ -203,11 +209,13 @@
 				7E1193982838D5AC00DAAC6C /* BadgePageView.swift in Sources */,
 				7E1193962838BB6100DAAC6C /* DetailQuestView.swift in Sources */,
 				7E1193912838A13000DAAC6C /* QuestModel.swift in Sources */,
+				7E1193E6283A3A6C00DAAC6C /* McEat.xcdatamodeld in Sources */,
 				7E11938E28388AB600DAAC6C /* Corners.swift in Sources */,
 				7E1193942838A5E300DAAC6C /* QuestData.swift in Sources */,
 				7E1193C22839D6FB00DAAC6C /* CustomColor.swift in Sources */,
 				7E8223B6282FE5E700B7B767 /* MainView.swift in Sources */,
 				7E998CDB2837798200E00DB9 /* McEatDetector.mlmodel in Sources */,
+				7E1193E3283A3A5900DAAC6C /* Persistence.swift in Sources */,
 				7E1193A02838FF8700DAAC6C /* FailedQuestPage.swift in Sources */,
 				7E11939C2838EADE00DAAC6C /* DetailBadgeView.swift in Sources */,
 				7E11939E2838F51C00DAAC6C /* VerifiedQuestView.swift in Sources */,
@@ -419,6 +427,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7E1193E4283A3A6C00DAAC6C /* McEat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E1193E5283A3A6C00DAAC6C /* McEat.xcdatamodel */,
+			);
+			currentVersion = 7E1193E5283A3A6C00DAAC6C /* McEat.xcdatamodel */;
+			path = McEat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7E82239A282FD6B200B7B767 /* Project object */;
 }

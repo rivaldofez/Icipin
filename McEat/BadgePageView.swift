@@ -47,7 +47,7 @@ struct BadgePageView: View {
                             .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
                             .background(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: .gray, radius: 3, x: 0, y: 0)
+                            .shadow(color: CustomColor.gray, radius: 3, x: 0, y: 0)
                             .padding(20)
                             
                         }
@@ -98,7 +98,7 @@ struct ItemBadgeLocked: View {
                 
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .frame(width: 50, height: 10)
-                    .foregroundColor(Color.red)
+                    .foregroundColor(CustomColor.primary)
             }
             
             Spacer()

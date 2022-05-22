@@ -12,10 +12,11 @@ struct VerifiedQuestView: View {
     @State var offset: CGFloat = 0
     @State var lastOffset: CGFloat = 0
     @GestureState var gestureOffset: CGFloat = 0
+    @State var isMidDrag: Bool = false
     
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: isMidDrag ? .top : .center) {
             VStack {
                 Text("CONGRATULATIONS")
                     .font(.system(.title2).bold())
@@ -28,7 +29,7 @@ struct VerifiedQuestView: View {
                     .frame(width: 200, height: 200)
                 Text("Soto Betawi")
                     .font(.system(.title2).bold())
-            }
+            }.padding(.top, isMidDrag ? 20 : 0)
             
             GeometryReader { geo -> AnyView in
                 //getting height for drag gesture
@@ -37,7 +38,7 @@ struct VerifiedQuestView: View {
                 
                 return AnyView(
                     ZStack {
-                        BlurView(style: .systemThinMaterialDark)
+                        CustomColor.primary
                             .clipShape(CustomShapeRounded(corners: [.topLeft,.topRight], radius: 30))
                         
                         VStack {
@@ -68,11 +69,14 @@ struct VerifiedQuestView: View {
                                 
                                 if -offset > 100 && -offset < maxHeight / 2{
                                     offset = -(maxHeight / 3)
+                                    isMidDrag = true
                                     
                                 }else if -offset > maxHeight / 2 {
                                     offset = -maxHeight
+                                    isMidDrag = true
                                 }else{
                                     offset = 0
+                                    isMidDrag = false
                                 }
                             }
                             

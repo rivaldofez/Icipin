@@ -39,10 +39,32 @@ struct QuestPageView: View {
                                 .foregroundColor(CustomColor.white)
                         }
                         .halfSheet(showSheet: self.$showSheetLocation){
-                            ZStack{
+                            ZStack(alignment:.topLeading){
                                 Color.white
-                                Text("Hello world")
-                            }.ignoresSafeArea()
+                                VStack(alignment: .leading) {
+                                    Text("Pilih Lokasi")
+                                        .font(.system(.title2).bold())
+                                    Divider()
+                                    HStack() {
+                                        Image(systemName: "infinity.circle")
+                                            .resizable()
+                                            .foregroundColor(CustomColor.gray)
+                                            .frame(width: 20, height: 20)
+                                        
+                                        VStack(alignment: .leading) {
+                                            Text("Lokasimu saat ini")
+                                                .font(.system(.title3).bold())
+                                            Text("Jalan padang panjang No.6c Pasar Manggis Setiabudi Jakarta selatan")
+                                                .font(.system(.body))
+                                                .foregroundColor(CustomColor.gray)
+                                                .padding(.top, 0.5)
+                                        }
+                                        
+                                    }
+                                    Divider()
+                                }.padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 20))
+                            }
+                            .ignoresSafeArea()
                         } onEnd: {
                             print("Dismissed")
                         }

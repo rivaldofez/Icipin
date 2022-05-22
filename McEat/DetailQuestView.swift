@@ -37,10 +37,10 @@ struct DetailQuestView: View {
                 }){
                     Text("Scan")
                         .font(.system(.title).bold())
-                        .foregroundColor(.white)
+                        .foregroundColor(CustomColor.white)
                 }
                 .frame(width: geo.size.width, height: 85)
-                .background(Corners(color: .red, tl: 20, tt: 20, bl: 40, bt: 40))
+                .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 40, bt: 40))
                 NavigationLink(destination: ScanpageView(), isActive: self.$showScanPage){
                 }
             }
@@ -57,7 +57,7 @@ struct ItemClue: View {
         HStack{
             Circle()
                 .frame(width: 20, height: 20)
-                .foregroundColor(.red)
+                .foregroundColor(CustomColor.primary)
             
             Text(clue)
                 .padding(.leading, 10)

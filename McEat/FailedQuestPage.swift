@@ -16,21 +16,25 @@ struct FailedQuestPage: View {
                 .foregroundColor(.black)
             Image("soto_betawi")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 200, height: 300)
             Text("Ayo !!! kuliner lagi untuk membuka questnya")
             Button(action: {}){
                 Text("Retry")
+                    .font(.system(.body).bold())
+                    .foregroundColor(CustomColor.white)
             }
-            .frame(width: 140, height: 50)
-            .background(.red)
+            .frame(width: 150, height: 50)
+            .background(CustomColor.primary)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.top, 50)
             
             Button(action: {}){
                 Text("Coba Quest Lain")
+                    .font(.system(.body).bold())
+                    .foregroundColor(CustomColor.white)
             }
-            .frame(width: 140, height: 50)
-            .background(.gray)
+            .frame(width: 150, height: 50)
+            .background(CustomColor.gray)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.top, 10)
             Spacer()

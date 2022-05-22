@@ -15,36 +15,43 @@ struct DetailQuestView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack {
-                LazyVGrid(columns: columnGrid, alignment: .leading){
-                    ForEach(questItem.clue, id: \.self){clue in
-                        ItemClue(clue: clue)
+            ZStack{
+                CustomColor.white
+                VStack {
+                    Text("Clue")
+                        .font(.system(.title).bold())
+                        .foregroundColor(.black)
+                    
+                    LazyVGrid(columns: columnGrid, alignment: .leading){
+                        ForEach(questItem.clue, id: \.self){clue in
+                            ItemClue(clue: clue)
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Sudah siap membuka Quest?")
+                        .font(.system(.title3).bold())
+                        .foregroundColor(.black)
+                    Text("Ayo scan makananmu dan buktikan!")
+                        .font(.system(.title3).bold())
+                        .foregroundColor(.black)
+                    
+                    Spacer()
+                    Button(action: {
+                        self.showScanPage = true
+                    }){
+                        Text("Scan")
+                            .font(.system(.title).bold())
+                            .foregroundColor(CustomColor.white)
+                    }
+                    .frame(width: geo.size.width, height: 85)
+                    .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 40, bt: 40))
+                    NavigationLink(destination: ScanpageView(questItem: questItem), isActive: self.$showScanPage){
                     }
                 }
-                
-                Spacer()
-                
-                Text("Sudah siap membuka Quest?")
-                    .font(.system(.title3).bold())
-                    .foregroundColor(.black)
-                Text("Ayo scan makananmu dan buktikan!")
-                    .font(.system(.title3).bold())
-                    .foregroundColor(.black)
-                
-                Spacer()
-                Button(action: {
-                    self.showScanPage = true
-                }){
-                    Text("Scan")
-                        .font(.system(.title).bold())
-                        .foregroundColor(CustomColor.white)
-                }
-                .frame(width: geo.size.width, height: 85)
-                .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 40, bt: 40))
-                NavigationLink(destination: ScanpageView(questItem: questItem), isActive: self.$showScanPage){
-                }
             }
-            .navigationTitle("Clue")
+            .navigationBarTitleDisplayMode(.inline)
             .edgesIgnoringSafeArea(.bottom)
         }
     }
@@ -61,6 +68,8 @@ struct ItemClue: View {
             
             Text(clue)
                 .padding(.leading, 10)
+                .font(.system(.body))
+                .foregroundColor(.black)
         }
         .padding(EdgeInsets(top: 20, leading: 25, bottom: 20, trailing: 25))
     }

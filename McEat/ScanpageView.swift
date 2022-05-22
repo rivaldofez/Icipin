@@ -14,10 +14,10 @@ struct ScanpageView: View {
     @State var timeRemaining = 15
     @State var isShow = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var showVarifiedPage = false
+    @State var showVerifiedPage = false
+    @State var showFailedPage = false
     @State var failedPage = false
     @State var predict : Predict? = nil
-    
     
     var body: some View {
         //call UIKit VC
@@ -49,39 +49,31 @@ struct ScanpageView: View {
                         }
                     }
                 
-                NavigationLink(destination: VerifiedQuestView(), isActive: self.$showVarifiedPage){
+                NavigationLink(destination: VerifiedQuestView(), isActive: self.$showVerifiedPage){
                 }
                 .onReceive(timer){_ in
                     if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML && timeRemaining < 10){
-                        self.showVarifiedPage = true
-                        print("Verified \(showVarifiedPage)")
-                    }else if(timeRemaining == 0){
-                        self.showVarifiedPage = false
-                        print("Not Verified")
+                        self.showVerifiedPage = true
+                        self.failedPage = false
                     }
                 }
-                
-                
-                
+                NavigationLink(destination: FailedQuestPage(), isActive: self.$showFailedPage){
+                }
+                .onReceive(timer){_ in
+                    if(timeRemaining == 0){
+                        self.showFailedPage = true
+                        self.showVerifiedPage = false
+                    }
+                }
             }
             
-        }.edgesIgnoringSafeArea(.bottom)
+        }.ignoresSafeArea()
 //        .onReceive(timer) { _ in
 //            if timeRemaining > 0 {
 //                timeRemaining -= 1
 //            }
 //        }
     }
-    
-    
-    func validate(){
-        if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML){
-            self.showVarifiedPage = true
-        }else{
-            self.showVarifiedPage = false
-        }
-    }
-    
 }
 
 protocol CustomDelegate {

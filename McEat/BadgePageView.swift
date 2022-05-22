@@ -15,50 +15,54 @@ struct BadgePageView: View {
     var body: some View {
         GeometryReader { geo in
             
-            VStack {
-                ZStack{
-                }
-                .frame(width: geo.size.width, height: 150)
-                .background(RadialCorners(radGrad: RadialGradient(colors: [CustomColor.secondary, CustomColor.primary], center: .center, startRadius: 0, endRadius: 200), tl: 0, tt: 0, bl: 70, bt: 70))
-                
-                
-                Text("Badges")
-                    .font(.headline.bold())
-                    .foregroundColor(.black)
-                    .frame(width: 250, height: 60)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .offset(x: 0, y: -40)
-                    .padding(.bottom, -40)
-                
-                
-                ScrollView(.vertical, showsIndicators: false){
-                    LazyVGrid(columns: columnGrid){
-                        ForEach((0...10), id: \.self){_ in
-                            Button(action: {
-                                self.showDetailBadge = true
-                                
-                            }){
-                                ZStack{
-                                    ItemBadge(geo: geo)
-                                    ItemBadgeLocked(geo: geo)
+            ZStack{
+                CustomColor.white
+                VStack {
+                    ZStack{
+                    }
+                    .frame(width: geo.size.width, height: 150)
+                    .background(RadialCorners(radGrad: RadialGradient(colors: [CustomColor.secondary, CustomColor.primary], center: .center, startRadius: 0, endRadius: 200), tl: 0, tt: 0, bl: 70, bt: 70))
+                    
+                    
+                    Text("Badges")
+                        .font(.headline.bold())
+                        .foregroundColor(.black)
+                        .frame(width: 250, height: 60)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .offset(x: 0, y: -40)
+                        .padding(.bottom, -40)
+                    
+                    
+                    ScrollView(.vertical, showsIndicators: false){
+                        LazyVGrid(columns: columnGrid){
+                            ForEach((0...10), id: \.self){_ in
+                                Button(action: {
+                                    self.showDetailBadge = true
+                                    
+                                }){
+                                    ZStack{
+                                        ItemBadge(geo: geo)
+                                        ItemBadgeLocked(geo: geo)
+                                    }
                                 }
+                                .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
+                                .background(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(color: CustomColor.gray, radius: 3, x: 0, y: 0)
+                                .padding(20)
+                                
                             }
-                            .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: CustomColor.gray, radius: 3, x: 0, y: 0)
-                            .padding(20)
-                            
-                        }
-                    }.background(
-                        NavigationLink(destination: DetailBadgeView(), isActive: self.$showDetailBadge){
-                        }
-                    )
+                        }.background(
+                            NavigationLink(destination: DetailBadgeView(), isActive: self.$showDetailBadge){
+                            }
+                        )
+                    }
+                    .clipped()
+                    
                 }
-                .clipped()
-                
-            }.navigationBarHidden(true)
+            }
+                .navigationBarHidden(true)
                 .edgesIgnoringSafeArea(.top)
         }
     }

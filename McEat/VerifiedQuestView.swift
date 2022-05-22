@@ -17,6 +17,7 @@ struct VerifiedQuestView: View {
     
     var body: some View {
         ZStack(alignment: isMidDrag ? .top : .center) {
+            CustomColor.white
             VStack {
                 Text("CONGRATULATIONS")
                     .font(.system(.title2).bold())
@@ -105,6 +106,7 @@ struct VerifiedQuestView: View {
                  )
             }.ignoresSafeArea(.all, edges: .bottom)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func onChange(){

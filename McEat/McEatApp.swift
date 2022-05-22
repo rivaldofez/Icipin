@@ -13,10 +13,10 @@ struct McEatApp: App {
         WindowGroup {
 //            QuestPageView()
 //            DetailQuestView(questItem: QuestData().questData[0].questItem[0])
-//            MainView()
-            NavigationView {
-                ScanpageView(questItem: QuestData().questData[0].questItem[0])
-            }
+            MainView()
+//            NavigationView {
+//                ScanpageView(questItem: QuestData().questData[0].questItem[0])
+//            }
             
 //            VerifiedQuestView()
 //            BadgePageView()

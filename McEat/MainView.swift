@@ -27,7 +27,7 @@ struct MainView: View {
                             .background(.red)
                     }
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 

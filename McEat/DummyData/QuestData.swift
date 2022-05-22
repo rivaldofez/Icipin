@@ -42,7 +42,7 @@ class QuestData {
             [
                 Quest(category: "Makanan Khas", questItem:
                         [
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -53,7 +53,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -64,7 +64,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -75,7 +75,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -86,7 +86,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -96,13 +96,68 @@ class QuestData {
                                         "menggunakan santan yang kental",
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
-                                      isUnlock: false)
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
                         ]
                       
                 ),
                 Quest(category: "Makanan Khas", questItem:
                         [
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -113,7 +168,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -124,7 +179,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -135,7 +190,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -146,7 +201,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -156,13 +211,68 @@ class QuestData {
                                         "menggunakan santan yang kental",
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
-                                      isUnlock: false)
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
                         ]
                       
                 ),
                 Quest(category: "Makanan Khas", questItem:
                         [
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -173,7 +283,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -184,7 +294,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -195,7 +305,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -206,7 +316,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -216,13 +326,68 @@ class QuestData {
                                         "menggunakan santan yang kental",
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
-                                      isUnlock: false)
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
                         ]
                       
                 ),
                 Quest(category: "Makanan Khas", questItem:
                         [
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -233,7 +398,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -244,7 +409,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -255,7 +420,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -266,7 +431,7 @@ class QuestData {
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
                                       isUnlock: false),
-                            QuestItem(title: "Santan Kental", image: "soto_betawi",
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
                                                Color(red: 0/255, green: 146/255, blue: 109/255)
                                              ],
@@ -276,7 +441,62 @@ class QuestData {
                                         "menggunakan santan yang kental",
                                         "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
                                       ],
-                                      isUnlock: false)
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
+                            QuestItem(labelML: "roti_buaya", title: "Santan Kental", image: "soto_betawi",
+                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
+                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                             ],
+                                      clue: [
+                                        "Masuk ke jenis soto",
+                                        "memiliki rasa yang sangat gurih",
+                                        "menggunakan santan yang kental",
+                                        "Isiannya terdiri atas daging sapi, jeroan, organ sapi, seperti mata sapi, torpedo, dan hati"
+                                      ],
+                                      isUnlock: false),
                         ]
                       
                 )

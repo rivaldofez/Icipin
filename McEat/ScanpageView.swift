@@ -10,17 +10,19 @@ import AVKit
 import Vision
 
 struct ScanpageView: View {
-    @State var timeRemaining = 100
+    @State var questItem: QuestItem
+    @State var timeRemaining = 15
     @State var isShow = false
-    @State var prediction = "0"
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
     @State var showVarifiedPage = false
     @State var failedPage = false
+    @State var predict : Predict? = nil
+    
+    
     var body: some View {
         //call UIKit VC
         ZStack{
-            ScanPageCustomView(prediction: self.$prediction)
+            ScanPageCustomView(predict: self.$predict)
             VStack {
 //                Text(prediction)
 //                if(Float(prediction)! > 0.8 && timeRemaining > 0){
@@ -29,13 +31,40 @@ struct ScanpageView: View {
 //                   Text("Tidak Hello")
 //                }
 //                Text("\(timeRemaining)")
+                
+
+                Text(predict?.label ?? "")
+                Text("\(predict?.confidence ?? 0.0)")
+                    
+                
                 Spacer()
                 Text("Initializing")
                     .font(.system(.title3).bold())
                     .foregroundColor(CustomColor.white)
                     .frame(width: UIScreen.main.bounds.width, height: 70)
                     .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 0, bt: 0))
+                    .onReceive(timer){_ in
+                        if(timeRemaining > 0){
+                            timeRemaining -= 1
+                        }
+                    }
+                
+                NavigationLink(destination: VerifiedQuestView(), isActive: self.$showVarifiedPage){
+                }
+                .onReceive(timer){_ in
+                    if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML && timeRemaining < 10){
+                        self.showVarifiedPage = true
+                        print("Verified \(showVarifiedPage)")
+                    }else if(timeRemaining == 0){
+                        self.showVarifiedPage = false
+                        print("Not Verified")
+                    }
+                }
+                
+                
+                
             }
+            
         }.edgesIgnoringSafeArea(.bottom)
 //        .onReceive(timer) { _ in
 //            if timeRemaining > 0 {
@@ -43,14 +72,25 @@ struct ScanpageView: View {
 //            }
 //        }
     }
+    
+    
+    func validate(){
+        if(predict?.confidence ?? 0 > 0.9 && predict?.label == questItem.labelML){
+            self.showVarifiedPage = true
+        }else{
+            self.showVarifiedPage = false
+        }
+    }
+    
 }
 
 protocol CustomDelegate {
-    func didUpdateWithValue(_ value: String)
+    func didUpdateWithValue(_ value: Predict?)
 }
 
 struct ScanPageCustomView: UIViewControllerRepresentable {
-    @Binding var prediction: String
+//    @Binding var prediction: String
+    @Binding var predict : Predict?
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let vc = ScanPageViewController()
@@ -72,8 +112,9 @@ struct ScanPageCustomView: UIViewControllerRepresentable {
             self.parent = customView
         }
         
-        func didUpdateWithValue(_ value: String) {
-            parent.prediction = value
+        func didUpdateWithValue(_ value: Predict?) {
+            parent.predict = value
+//            parent.prediction = value
         }
     }
 }
@@ -134,7 +175,9 @@ class ScanPageViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
 
             guard let food = firstResult.labels.first else {return}
             
-            self.updateIsShowValue(prediction: "\(food.confidence)")
+//            self.updateIsShowValue(prediction: "\(food.confidence)")
+//            self.bindData(predict: [food.identifier: food.confidence])
+            self.bindData(predict: Predict(label: food.identifier, confidence: food.confidence))
 
         }]
     }
@@ -146,7 +189,7 @@ class ScanPageViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform(self.requests)
     }
     
-    func updateIsShowValue(prediction: String){
-        customDelegate?.didUpdateWithValue(prediction)
+    func bindData(predict: Predict?){
+        customDelegate?.didUpdateWithValue(predict)
     }
 }

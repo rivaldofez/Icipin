@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuestItem: Identifiable {
     let id = UUID()
+    let labelML: String
     let title: String
     let image: String
     let color: [Color]
@@ -21,5 +22,11 @@ struct Quest: Identifiable {
     let id = UUID()
     let category: String
     var questItem: [QuestItem]
+}
+
+struct Predict: Identifiable {
+    let id = UUID()
+    var label: String
+    var confidence: Float
 }
 

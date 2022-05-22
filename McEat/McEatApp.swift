@@ -14,7 +14,10 @@ struct McEatApp: App {
 //            QuestPageView()
 //            DetailQuestView(questItem: QuestData().questData[0].questItem[0])
 //            MainView()
-            ScanpageView()
+            NavigationView {
+                ScanpageView(questItem: QuestData().questData[0].questItem[0])
+            }
+            
 //            VerifiedQuestView()
 //            BadgePageView()
 //            DetailBadgeView()

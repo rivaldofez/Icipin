@@ -148,7 +148,7 @@ struct ItemQuest: View {
     var isUnlock: Bool
     
     var body: some View {
-        let titleArr = questItem.title.components(separatedBy: " ")
+        let titleArr = isUnlock ? questItem.unlockQuest.title.components(separatedBy: " ") : questItem.title.components(separatedBy: " ")
         Button(action: {
             showDetailQuestPage = true
             selectedQuestItem = questItem
@@ -168,7 +168,7 @@ struct ItemQuest: View {
                     }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                     
                     HStack{
-                        Text(titleArr[1])
+                        Text(titleArr.count==1 ? "" : titleArr[1])
                             .font(.system(.title3).bold())
                             .foregroundColor(CustomColor.white)
                         Spacer()

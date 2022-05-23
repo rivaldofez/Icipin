@@ -71,19 +71,12 @@ struct ScanpageView: View {
                         }
                         
                         userDefaults.set(updateDict, forKey: "dictQuest")
-                        
-                        
-                        
-                        
-                        
                         self.showVerifiedPage = true
                         self.failedPage = false
                         self.timer.upstream.connect().cancel()
                         
                     }
                 }
-                
-                
             }
             Image("scan_placeholder")
                 .resizable()

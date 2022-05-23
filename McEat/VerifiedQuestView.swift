@@ -110,13 +110,8 @@ struct VerifiedQuestView: View {
                                         isMidDrag = false
                                     }
                                 }
-                                
-                                //storing last offset
-                                //so that the gesture can continue form the last position
-                                
                                 lastOffset = offset
                             })
-                                    
                                     )
                      )
                 }.ignoresSafeArea(.all, edges: .bottom)

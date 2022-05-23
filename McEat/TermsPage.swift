@@ -22,7 +22,7 @@ struct TermsPage: View {
                     .font(.system(.title2).bold())
                     .foregroundColor(.black)
                 
-                Text("Created by: McEat (Team 13 Afternoon Session")
+                Text("Created by: McEat (Team 13 Afternoon Session)")
                     .font(.system(.body))
                     .foregroundColor(.black)
                     .padding(5)

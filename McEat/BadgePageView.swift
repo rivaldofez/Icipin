@@ -11,8 +11,15 @@ import SwiftUI
 struct BadgePageView: View {
     var columnGrid = Array(repeating: GridItem(), count: 2)
     @State var showDetailBadge: Bool = false
+    let userDefaults = UserDefaults.standard
+    @State var count = 0
+    @State var badgesData = [Badge]()
+    
+    
     
     var body: some View {
+        let fetchDict = userDefaults.object(forKey: "dictQuest") as? [String:Bool]
+        
         GeometryReader { geo in
             
             ZStack{
@@ -36,14 +43,18 @@ struct BadgePageView: View {
                     
                     ScrollView(.vertical, showsIndicators: false){
                         LazyVGrid(columns: columnGrid){
-                            ForEach((0...10), id: \.self){_ in
+                            ForEach(badgesData, id: \.id){badge in
                                 Button(action: {
                                     self.showDetailBadge = true
-                                    
                                 }){
                                     ZStack{
-                                        ItemBadge(geo: geo)
-                                        ItemBadgeLocked(geo: geo)
+
+                                        if(badge.isUnlock){
+                                            ItemBadge(geo: geo, badge: badge)
+                                        }else{
+                                            ItemBadge(geo: geo, badge: badge)
+                                            ItemBadgeLocked(geo: geo, badge: badge)
+                                        }
                                     }
                                 }
                                 .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
@@ -64,6 +75,23 @@ struct BadgePageView: View {
             }
                 .navigationBarHidden(true)
                 .edgesIgnoringSafeArea(.top)
+        }.onAppear{
+                badgesData.removeAll()
+               var count = 0
+               for bg in BadgeData().badgeData {
+                   count = 0
+                   for i in 0..<bg.require.count {
+                        let req = fetchDict?[bg.require[i]]
+                        if(req ?? false){
+                            count += 1
+                        }
+                    }
+                   if(count == bg.require.count){
+                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: true, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story, progress: count)]
+                   }else{
+                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: bg.isUnlock, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story, progress: count)]
+                   }
+            }
         }
     }
 }
@@ -71,10 +99,11 @@ struct BadgePageView: View {
 
 struct ItemBadge: View {
     var geo: GeometryProxy
+    var badge: Badge
     
     var body: some View {
         VStack{
-            Image("ondel")
+            Image(badge.image)
                 .resizable()
                 .frame(width: (geo.size.width/2)-60, height: (geo.size.width/2)-60)
         }
@@ -85,11 +114,12 @@ struct ItemBadge: View {
 
 struct ItemBadgeLocked: View {
     var geo: GeometryProxy
+    var badge: Badge
     
     var body: some View {
         VStack{
             Spacer()
-            Text("6 / 16")
+            Text("\(badge.progress) / \(badge.require.count)")
                 .font(.system(.caption))
                 .foregroundColor(.black)
             

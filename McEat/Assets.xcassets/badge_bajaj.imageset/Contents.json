@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "badge_bajaj.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

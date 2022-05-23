@@ -17,6 +17,18 @@ struct QuestItem: Identifiable {
     let unlockQuest: UnlockQuest
 }
 
+struct Badge: Identifiable {
+    var id = UUID()
+    var title: String
+    var tagline: String
+    var image: String
+    var isUnlock: Bool
+    var require: [String]
+    var storyHeadline: String
+    var story: String
+    var progress: Int
+
+}
 
 struct Quest: Identifiable {
     let id = UUID()

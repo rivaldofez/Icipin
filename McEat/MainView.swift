@@ -19,7 +19,7 @@ struct MainView: View {
             TabView {
                 QuestPageView()
                     .tabItem{
-                        Label("Quest", systemImage: "house.fill")
+                        Label("Quest",systemImage: "scroll")
                     }.environment(\.managedObjectContext, persistenceController.container.viewContext)
                 
                 BadgePageView()

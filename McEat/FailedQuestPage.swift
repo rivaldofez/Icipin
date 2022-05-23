@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct FailedQuestPage: View {
+    var questItem: QuestItem
+    @State var showScanPage = false
+    @State var showQuestPage = false
+    
     var body: some View {
         ZStack {
             CustomColor.white
@@ -16,11 +20,14 @@ struct FailedQuestPage: View {
                 Text("Maaf, bukan ini yang kami maksud")
                     .font(.system(.title2).bold())
                     .foregroundColor(.black)
-                Image("soto_betawi")
+                Image("sad")
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 200, height: 300)
                 Text("Ayo !!! kuliner lagi untuk membuka questnya")
-                Button(action: {}){
+                Button(action: {
+                    self.showScanPage = true
+                }){
                     Text("Retry")
                         .font(.system(.body).bold())
                         .foregroundColor(CustomColor.white)
@@ -30,25 +37,34 @@ struct FailedQuestPage: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.top, 50)
                 
-                Button(action: {}){
+                NavigationLink(destination: ScanpageView(questItem: questItem), isActive: self.$showScanPage){
+                }
+                
+                Button(action: {
+                    self.showQuestPage = true
+                }){
                     Text("Coba Quest Lain")
                         .font(.system(.body).bold())
                         .foregroundColor(CustomColor.white)
+                    
                 }
-                
                 .frame(width: 150, height: 50)
                 .background(CustomColor.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.top, 10)
+                NavigationLink(destination: MainView(), isActive: self.$showQuestPage){
+                }
+                
                 Spacer()
                 
             }.padding(20)
         }.navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
     }
 }
 
-struct FailedQuestPage_Previews: PreviewProvider {
-    static var previews: some View {
-        FailedQuestPage()
-    }
-}
+//struct FailedQuestPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FailedQuestPage()
+//    }
+//}

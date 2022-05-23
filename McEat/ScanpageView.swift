@@ -34,7 +34,7 @@ struct ScanpageView: View {
                         .background(CustomColor.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                 }.padding(.top, 50)
-                NavigationLink(destination: FailedQuestPage(), isActive: self.$showFailedPage){
+                NavigationLink(destination: FailedQuestPage(questItem: questItem), isActive: self.$showFailedPage){
                 }
                 .onReceive(timer){_ in
                     if(timeRemaining == 0){

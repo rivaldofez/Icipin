@@ -31,26 +31,28 @@ struct DetailBadgeView: View {
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 5, trailing: 0))
                     
                     Text(badge.title)
-                        .font(.system(.caption))
+                        .font(.system(.title3))
                         .foregroundColor(.black)
                     
-                    HStack {
-                        Text(badge.storyHeadline)
-                            .font(.system(.title2))
+                    Divider()
+                    
+                    ScrollView{
+                        HStack {
+                            Text(badge.storyHeadline)
+                                .font(.system(.title2))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                        
+                        HStack {
+                            Text(badge.story)
+                            .font(.system(.body))
                             .foregroundColor(.black)
-                        Spacer()
+                            Spacer()
+                        }
+                        .padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20))
                     }
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
-                    
-                    HStack {
-                        Text(badge.story)
-                        .font(.system(.body))
-                        .foregroundColor(.black)
-                        Spacer()
-                    }
-                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
-                    
-                    Spacer()
                 }
             }.navigationBarTitleDisplayMode(.inline)
         }

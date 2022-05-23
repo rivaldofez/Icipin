@@ -1,17 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "1000_F_175292987_bUtWKlbep04JT09VWylMsMPt27SJ8D5a.jpg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "sad.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

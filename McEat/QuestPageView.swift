@@ -16,6 +16,7 @@ struct QuestPageView: View {
     @State var showDetailQuest : Bool = false
     @State var selectedQuest: QuestItem = QuestData().questData[0].questItem[0]
     @State var showSheetLocation: Bool = false
+    @State var showTerm: Bool = false
     let userDefaults = UserDefaults.standard
     
     
@@ -132,6 +133,22 @@ struct QuestPageView: View {
                         NavigationLink(destination: DetailQuestView(questItem:  selectedQuest), isActive: self.$showDetailQuest){
                         }
                     )
+                    
+                    Button(action:{
+                        self.showTerm = true
+                    }){
+                        HStack {
+                            Text("TERM AND CONDITIONAL")
+                                .font(.system(.caption))
+                                .foregroundColor(.gray)
+                            Image(systemName: "chevron.right")
+                                .resizable()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    NavigationLink(destination: TermsPage(), isActive: self.$showTerm){
+                    }
                 }
                 .clipped()
             }.navigationBarHidden(true)

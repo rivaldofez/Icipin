@@ -87,9 +87,9 @@ struct BadgePageView: View {
                         }
                     }
                    if(count == bg.require.count){
-                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: true, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story, progress: count)]
+                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: true, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story,clue: bg.clue, progress: count)]
                    }else{
-                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: bg.isUnlock, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story, progress: count)]
+                       badgesData += [Badge(title: bg.title, tagline: bg.tagline, image: bg.image, isUnlock: bg.isUnlock, require: bg.require, storyHeadline: bg.storyHeadline, story: bg.story,clue: bg.clue, progress: count)]
                    }
             }
         }
@@ -117,6 +117,7 @@ struct ItemBadgeLocked: View {
     var badge: Badge
     
     var body: some View {
+        let scale = Float(badge.progress/badge.require.count)
         VStack{
             Spacer()
             Text("\(badge.progress) / \(badge.require.count)")
@@ -131,13 +132,13 @@ struct ItemBadgeLocked: View {
                     
                 
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .frame(width: 50, height: 10)
+                    .frame(width: CGFloat(scale) * 120, height: 10)
                     .foregroundColor(CustomColor.primary)
             }
             
             Spacer()
             
-            Text("Selesaikan semua Quest yang ada di jakarta")
+            Text(badge.clue)
                 .font(.system(.body).bold())
                 .foregroundColor(.black)
             Spacer()

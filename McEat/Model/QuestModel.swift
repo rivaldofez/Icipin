@@ -26,6 +26,7 @@ struct Badge: Identifiable {
     var require: [String]
     var storyHeadline: String
     var story: String
+    var clue: String
     var progress: Int
 
 }

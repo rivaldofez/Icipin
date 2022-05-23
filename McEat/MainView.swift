@@ -24,7 +24,7 @@ struct MainView: View {
                 
                 BadgePageView()
                     .tabItem{
-                        Label("Badge", systemImage: "gift")
+                        Label("Badge", systemImage: "star")
                             .background(.red)
                     }
             }

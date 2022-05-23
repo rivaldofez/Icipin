@@ -14,7 +14,7 @@ struct BadgePageView: View {
     let userDefaults = UserDefaults.standard
     @State var count = 0
     @State var badgesData = [Badge]()
-    
+    @State var currentBadge = BadgeData().badgeData[0]
     
     
     var body: some View {
@@ -46,6 +46,7 @@ struct BadgePageView: View {
                             ForEach(badgesData, id: \.id){badge in
                                 Button(action: {
                                     self.showDetailBadge = true
+                                    currentBadge = badge
                                 }){
                                     ZStack{
 
@@ -57,6 +58,7 @@ struct BadgePageView: View {
                                         }
                                     }
                                 }
+                                .disabled(!badge.isUnlock)
                                 .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -65,7 +67,7 @@ struct BadgePageView: View {
                                 
                             }
                         }.background(
-                            NavigationLink(destination: DetailBadgeView(), isActive: self.$showDetailBadge){
+                            NavigationLink(destination: DetailBadgeView(badge: currentBadge), isActive: self.$showDetailBadge){
                             }
                         )
                     }

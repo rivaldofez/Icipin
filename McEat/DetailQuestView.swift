@@ -46,7 +46,7 @@ struct DetailQuestView: View {
                             .foregroundColor(CustomColor.white)
                     }
                     .frame(width: geo.size.width, height: 85)
-                    .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 40, bt: 40))
+                    .background(Corners(color: CustomColor.primary, tl: 20, tt: 20, bl: 0, bt: 0))
                     
                 }
             }

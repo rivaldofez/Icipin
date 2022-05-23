@@ -28,8 +28,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Soto Betawi", image: "pc_soto_betawi" ,story: "Soto Betawi merupakan soto yang khas dari daerah DKI Jakarta. Seperti halnya Soto Madura dan Soto Sulung, soto Betawi juga menggunakan jeroan. Selain jeroan, sering kali organ-organ lain juga disertakan, seperti mata, terpedo, dan juga hati. Daging sapi juga menjadi bahan campuran dalam soto Betawi.")
                                      ),
                             QuestItem(labelML: "kerak_telor", title: "Wajan Dibalik", image: "kerak_telor",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 119/255, blue: 29/255),
+                                               Color(red: 213/255, green: 34/255, blue: 0/255)
                                              ],
                                       clue: [
                                         "Cara memasaknya sangat unik yaitu dengan membalikkan  wajan kebawah",
@@ -40,8 +40,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_kerak_telor", story: "Kerak telur adalah makanan asli daerah Jakarta, dengan bahan-bahan beras ketan putih, telur ayam atau bebek, ebi yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai, cabai merah, kencur, jahe, merica butiran, garam dan gula pasir.")
                                      ),
                             QuestItem(labelML: "asinan_betawi", title: "Kerupuk Mie", image: "asinan_betawi",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 16/255, green: 196/255, blue: 245/255),
+                                               Color(red: 0/255, green: 108/255, blue: 161/255)
                                              ],
                                       clue: [
                                         "Makanan yang dibuat dengan cara pengacaran",
@@ -52,8 +52,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_asinan_betawi", story: "Asinan khas Betawi aslinya hanya menggunakan bahan berupa sayur mayur, bukan buah seperti asinan Bogor. Asinan betawi juga dilengkapi dengan bumbu kacang dan kerupuk mie kuning. Asinan nikmat disantap pada siang hari. Kesegaran sayuran dan kuah bumbu kacangnya yang asam-pedas-manis-gurih terasa cetar di lidah.")
                                      ),
                             QuestItem(labelML: "roti_buaya", title: "Roti Playboy", image: "roti_buaya",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 103/255, green: 103/255, blue: 0/255),
+                                               Color(red: 157/255, green: 63/255, blue: 109/255)
                                              ],
                                       clue: [
                                         "Sebuah roti berbentuk unik",
@@ -69,8 +69,8 @@ class QuestData {
                 Quest(category: "Minuman Recommended", questItem:
                         [
                             QuestItem(labelML: "bir_pletok", title: "Bir Halal", image: "bir_pletok",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 206/255, blue: 72/255),
+                                               Color(red: 148/255, green: 108/255, blue: 109/255)
                                              ],
                                       clue: [
                                         "Minuman khas jakarta",
@@ -81,8 +81,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Bir Pletok", image: "pc_bir_pletok", story: "Bir pletok merupakan minuman khas masyarakat Betawi yang sudah populer sejak zaman kolonial. Dibuat dari godokan 13 macam rempah yakni, jahe, jahe merah, sereh, kunyit, kayu secang, kayu manis, lada hitam, daun pandan, daun jeruk, biji pala, kapulaga, kembang lawang, serta cengkeh, ditambah gula dan garam.")
                                      ),
                             QuestItem(labelML: "es_ragusa", title: "Es Colloseum", image: "es_ragusa",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 254/255, green: 128/255, blue: 255/255),
+                                               Color(red: 187/255, green: 0/255, blue: 124/255)
                                              ],
                                       clue: [
                                         "Keluarga eskrim",
@@ -93,8 +93,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Es Ragusa", image: "pc_es_ragusa", story: "Ragusa Italian Ice Cream merupakan salah satu toko es krim legendaris dan tertua di Jakarta yang berdiri sejak 1932. Ragusa Italian Ice Cream didirkan oleh Ragusa bersaudara, yaitu orang asli Italia bernama Luigi Ragusa dan Vincenzo.  Toko es krim Ragusa mulanya hanya ada di Bandung. Namun, Ragusa kerap membuka lapak es krim melalui acara tahunan di Jakarta.")
                                      ),
                             QuestItem(labelML: "es_selendang", title: "Selendang Dingin", image: "es_selendang",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 135/255, blue: 135/255),
+                                               Color(red: 205/255, green: 0/255, blue: 0/255)
                                              ],
                                       clue: [
                                         "Keluarga es",
@@ -105,8 +105,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Kerak Telor", image: "pc_es_selendang", story: "Es selendang mayang adalah salah satu minuman tradisional Indonesia asal Jakarta. Minuman ini sekarang jarang ditemukan karena dikalangan masyarakat Betawi sendiri minuman ini dianggap minuman kuno. Di acara-acara tertentu seperti Lebaran Betawi, minuman ini disajikan dan sering disertai dengan label 'minuman Betawi jadul'. Selain menyegarkan, minuman ini dapat mengurangi rasa lapar karena dibuat dengan bahan dasar tepung beras. Beberapa penjual di kota tua membuat minuman ini dengan bahan dasar tepung hunkwedengan alasan lebih mudah dan efisien.")
                                      ),
                             QuestItem(labelML: "es_campur_betawi", title: "Es Dangdut", image: "es_campur_betawi",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 131/255, green: 169/255, blue: 0/255),
+                                               Color(red: 51/255, green: 133/255, blue: 0/255)
                                              ],
                                       clue: [
                                         "Keluarga Es",
@@ -122,8 +122,8 @@ class QuestData {
                 Quest(category: "Makanan Viral", questItem:
                         [
                             QuestItem(labelML: "croffle", title: "Roti Geprek", image: "croffle",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 224/255, green: 151/255, blue: 89/255),
+                                               Color(red: 209/255, green: 0/255, blue: 0/255)
                                              ],
                                       clue: [
                                         "Makanan yang namanya berasal dari gabungan dua makanan  berbeda",
@@ -146,8 +146,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Korean Garlic Bread", image: "pc_korean_garlic", story: "Street food Korea Selatan ini merupakan roti dengan topping krim keju yang disiram saus bawang putih. Sedikit berbeda, di sini aku memadukannya dengan topping cheese bechamel. Tentunya cocok dengan tekstur roti yang crunchy dan lembut. Makanan ini sempat viral di Indonesia beberapa waktu lalu.")
                                      ),
                             QuestItem(labelML: "subway", title: "Sandwich Kereta", image: "subway",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 227/255, blue: 5/255),
+                                               Color(red: 170/255, green: 128/255, blue: 0/255)
                                              ],
                                       clue: [
                                         "Banyak muncul di drama korea",
@@ -158,8 +158,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Subway", image: "pc_subway", story: "Subway adalah waralaba restoran cepat saji multi-nasional Amerika yang terutama menjual sandwich, wraps, salad, dan minuman kapal selam. Subway didirikan oleh Fred DeLuca yang berusia 17 tahun dan dibiayai oleh Peter Buck pada tahun 1965 sebagai Kapal Selam Super Pete di Bridgeport, Connecticut. Subway sempat membuka restorannya di Indonesia pada tahun 1986, namun sempat tutup karena krisis moneter di tahun 1998. Kemudian baru-baru ini subway kembali membuka restorannya di Indonesia dan langsung viral karena digandrungi kawula muda Indonesia.")
                                      ),
                             QuestItem(labelML: "odeng", title: "Fishcake Tusuk", image: "odeng",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 128/255, green: 203/255, blue: 168/255),
+                                               Color(red: 21/255, green: 126/255, blue: 77/255)
                                              ],
                                       clue: [
                                         "Lebih dikenal sebagai fishcake",
@@ -174,8 +174,8 @@ class QuestData {
                 Quest(category: "Makanan Recommended", questItem:
                         [
                             QuestItem(labelML: "sate_taichan", title: "Sate Putih", image: "sate_taichan",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 99/255, green: 194/255, blue: 255/255),
+                                               Color(red: 0/255, green: 62/255, blue: 205/255)
                                              ],
                                       clue: [
                                         "Keluarga sate",
@@ -187,8 +187,8 @@ class QuestData {
                                      
                                      ),
                             QuestItem(labelML: "gultik", title: "Makanan Tikungan", image: "gultik",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 22/255, green: 194/255, blue: 230/255),
+                                               Color(red: 0/255, green: 129/255, blue: 143/255)
                                              ],
                                       clue: [
                                         "Makanan ini terkenal sebagai makanan malam yang murah",
@@ -199,8 +199,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Gultik", image: "pc_gultik", story: "Gultik merupakan singkatan dari gulai tikungan. Dinamakan gulai tikungan karena banyak pedagang gulai yang mangkal di tikungan jalan tersebut. Ada sekitar 15 pedagang gulai di kawasan belakang Blok M Plaza tersebut. Beberapa dari mereka sudah berjualan sejak puluhan tahun lalu. Rata-rata rasa dari gulai yang mereka jajakan pun tidak jauh berbeda.")
                                      ),
                             QuestItem(labelML: "oyster", title: "Kerang Mr.Bean", image: "oyster",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 110/255, blue: 148/255),
+                                               Color(red: 203/255, green: 0/255, blue: 141/255)
                                              ],
                                       clue: [
                                         "Keluarga Kerang",
@@ -211,8 +211,8 @@ class QuestData {
                                       unlockQuest: UnlockQuest(title: "Oyster", image: "pc_oyster", story: "Oyster atau disebut juga dengan tiram ialah moluska bivalvia yang hidup di perairan pantai beriklim sedang dan hangat.  Oyster merupakan tiram laut yang harganya termasuk mahal dibanding kerang yang biasa ditemui di pasaran.  Selain rasanya yang enak dan kaya manfaat, ukuran oyster juga mempengaruhi mahalnya harga oyster, khususnya di Indonesia.")
                                      ),
                             QuestItem(labelML: "haka_dimsum", title: "Siomay Tiongkok", image: "haka_dimsum",
-                                      color: [ Color(red: 25/255, green: 235/255, blue: 205/255),
-                                               Color(red: 0/255, green: 146/255, blue: 109/255)
+                                      color: [ Color(red: 255/255, green: 186/255, blue: 138/255),
+                                               Color(red: 182/255, green: 91/255, blue: 7/255)
                                              ],
                                       clue: [
                                         "Makanan khas yang bermula dari Tiongkok",

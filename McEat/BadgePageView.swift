@@ -74,7 +74,7 @@ struct ItemBadge: View {
     
     var body: some View {
         VStack{
-            Image("soto_betawi")
+            Image("ondel")
                 .resizable()
                 .frame(width: (geo.size.width/2)-60, height: (geo.size.width/2)-60)
         }

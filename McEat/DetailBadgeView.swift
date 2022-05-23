@@ -16,9 +16,10 @@ struct DetailBadgeView: View {
                     Text("Jakarta Culinary Enthusiast")
                         .font(.system(.title2).bold())
                         .foregroundColor(.black)
+                        .padding(.top, 20)
                     
                     VStack{
-                        Image("soto_betawi")
+                        Image("ondel")
                             .resizable()
                             .frame(width: (geo.size.width/2)-60, height: (geo.size.width/2)-60)
                     }

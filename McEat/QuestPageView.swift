@@ -88,7 +88,7 @@ struct QuestPageView: View {
                         
                         for questData in QuestData.init().questData {
                             for questItem in questData.questItem {
-                                dictQuest[questItem.labelML] = true
+                                dictQuest[questItem.labelML] = false
                             }
                         }
                         userDefaults.set(dictQuest, forKey: "dictQuest")

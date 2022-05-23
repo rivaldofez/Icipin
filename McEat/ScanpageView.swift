@@ -10,7 +10,6 @@ import AVKit
 import Vision
 
 struct ScanpageView: View {
-    @Environment(\.managedObjectContext) private var viewContext
     @State var questItem: QuestItem
     @State var timeRemaining = 15
     @State var isShow = false
@@ -19,11 +18,10 @@ struct ScanpageView: View {
     @State var showFailedPage = false
     @State var failedPage = false
     @State var predict : Predict? = nil
-    @FetchRequest(sortDescriptors: []) var questPersist: FetchedResults<QuestPersistence>
-    
+    let userDefaults = UserDefaults.standard
+
     var body: some View {
         //call UIKit VC
-        let allDictQuest = Dictionary(grouping: questPersist, by: {quest in quest.labelML})
         ZStack{
             ScanPageCustomView(predict: self.$predict)
             VStack {
@@ -43,8 +41,6 @@ struct ScanpageView: View {
                         self.timer.upstream.connect().cancel()
                         self.showFailedPage = true
                         self.showVerifiedPage = false
-                        
-
                     }
                 }
                 
@@ -64,11 +60,26 @@ struct ScanpageView: View {
                 }
                 .onReceive(timer){_ in
                     if(predict?.confidence ?? 0 > 0.7 && predict?.label == questItem.labelML && timeRemaining < 12){
+                        let fetchDict = userDefaults.object(forKey: "dictQuest") as? [String:Bool]
+                        var updateDict = [String:Bool]()
+                        fetchDict?.forEach{
+                            if($0.key == questItem.labelML){
+                                updateDict[$0.key] = true
+                            }else{
+                                updateDict[$0.key] = $0.value
+                            }
+                        }
+                        
+                        userDefaults.set(updateDict, forKey: "dictQuest")
+                        
+                        
+                        
+                        
+                        
                         self.showVerifiedPage = true
                         self.failedPage = false
                         self.timer.upstream.connect().cancel()
                         
-//                        PersistenceController().update(questItem: questItem, id: allDictQuest[questItem.labelML]?[0].id ?? UUID())
                     }
                 }
                 

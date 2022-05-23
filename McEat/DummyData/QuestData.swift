@@ -131,7 +131,7 @@ class QuestData {
                                         "Bahan dasarnya adalah roti yang berasal dari Austria namun populer di Perancis",
                                         "Menggunakan cetakan khusus untuk memasaknya"
                                       ],
-                                      unlockQuest: UnlockQuest(title: "Croffle", image: "pc_croffle", story: "Croffle pada dasarnya adalah perkawinan antara croissant dan waffle. Lapisan kue yang terkelupas mengembang dan mengisi cetakan waffle dan mendapatkan tepi luar yang renyah dan sempurna. Croffle dibuat oleh koki pastry Irlandia dan akhirnya menjadi sangat populer di Korea dan juga Indonesia.")
+                                      unlockQuest: UnlockQuest(title: "Croffle ", image: "pc_croffle", story: "Croffle pada dasarnya adalah perkawinan antara croissant dan waffle. Lapisan kue yang terkelupas mengembang dan mengisi cetakan waffle dan mendapatkan tepi luar yang renyah dan sempurna. Croffle dibuat oleh koki pastry Irlandia dan akhirnya menjadi sangat populer di Korea dan juga Indonesia.")
                                      ),
                             QuestItem(labelML: "korean_garlic", title: "Roti Korea", image: "korean_garlic",
                                       color: [ Color(red: 25/255, green: 235/255, blue: 205/255),

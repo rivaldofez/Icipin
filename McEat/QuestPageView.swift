@@ -9,7 +9,6 @@ import SwiftUI
 
 
 struct QuestPageView: View {
-    @Environment(\.managedObjectContext) private var viewContext
     @AppStorage("isFirstTime") private var isFirstTime = true
     var rowGrid = Array(repeating: GridItem(), count: 1)
     var columnGrid = Array(repeating: GridItem(), count: 1)
@@ -17,23 +16,14 @@ struct QuestPageView: View {
     @State var showDetailQuest : Bool = false
     @State var selectedQuest: QuestItem = QuestData().questData[0].questItem[0]
     @State var showSheetLocation: Bool = false
-    @FetchRequest(sortDescriptors: []) var questPersist: FetchedResults<QuestPersistence>
+    let userDefaults = UserDefaults.standard
+    
     
     var body: some View {
-//        let dictByKeyVersionOne = Dictionary(grouping: studentArray, by: {student in student.classId})
-        let allDictQuest = Dictionary(grouping: questPersist, by: {quest in quest.labelML})
-//        let keys = allDictQuest.map{$0.key}
-//        let values = allDictQuest.map {$0.value}
-        
+        let dictQuestPersist = userDefaults.object(forKey: "dictQuest") as! [String: Bool]
         ZStack{
             Color.white
             VStack {
-//                ForEach(keys.indices) {index in
-//                            HStack {
-////                                Text(keys[index] ?? "")
-//                                Text((values[index][0].labelML) ?? "")
-//                            }
-//                        }
                 ZStack{
                     HStack {
                         Image(systemName: "xmark")
@@ -93,15 +83,14 @@ struct QuestPageView: View {
                 .background(RadialCorners(radGrad: RadialGradient(colors: [CustomColor.secondary, CustomColor.primary], center: .center, startRadius: 0, endRadius: 200), tl: 0, tt: 0, bl: 70, bt: 70))
                 .onReceive(timer){_ in
                     if(isFirstTime){
+                        var dictQuest = [String:Bool]()
+                        
                         for questData in QuestData.init().questData {
                             for questItem in questData.questItem {
-                                let newQuestPersistence = QuestPersistence(context: viewContext)
-                                newQuestPersistence.id = UUID()
-                                newQuestPersistence.isUnlock = false
-                                newQuestPersistence.labelML = questItem.labelML
+                                dictQuest[questItem.labelML] = true
                             }
                         }
-                        try? viewContext.save()
+                        userDefaults.set(dictQuest, forKey: "dictQuest")
                         isFirstTime = false
                         self.timer.upstream.connect().cancel()
                     }
@@ -130,7 +119,7 @@ struct QuestPageView: View {
                                 ScrollView(.horizontal, showsIndicators: false){
                                     LazyHGrid(rows: rowGrid, spacing: 10){
                                         ForEach(quest.questItem, id: \.id){questItem in
-                                            ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem, allDictQuest: allDictQuest)
+                                            ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem, dictQuestPersist: dictQuestPersist)
                                         }
                                     }
                                 }
@@ -155,18 +144,20 @@ struct ItemQuest: View {
     @Binding var showDetailQuestPage : Bool
     @Binding var selectedQuestItem : QuestItem
     var questItem: QuestItem
-    var allDictQuest: [String?:  [FetchedResults<QuestPersistence>.Element]]
+    var dictQuestPersist: [String:Bool]
+    
     
     var body: some View {
-        let titleArr = questItem.title.components(separatedBy: " ")
-        let questItemPersist = allDictQuest[questItem.labelML]
+        let isUnlock = dictQuestPersist[questItem.labelML]!
+        let titleArr =  questItem.title.components(separatedBy: " ")
+        
         Button(action: {
             showDetailQuestPage = true
             selectedQuestItem = questItem
         }){
             ZStack{
                 VStack{
-                    Image(questItemPersist?[0].isUnlock ?? false ? questItem.unlockQuest.image : questItem.image )
+                    Image(isUnlock ? questItem.unlockQuest.image : questItem.image)
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 20))

@@ -58,7 +58,7 @@ struct BadgePageView: View {
                                         }
                                     }
                                 }
-//                                .disabled(!badge.isUnlock)
+                                .disabled(!badge.isUnlock)
                                 .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -120,7 +120,6 @@ struct ItemBadgeLocked: View {
     
     
     var body: some View {
-        var scale: CGFloat = CGFloat(0)
         VStack{
             Spacer()
             Text("\(badge.progress) / \(badge.require.count)")
@@ -135,7 +134,7 @@ struct ItemBadgeLocked: View {
                     
                 
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .frame(width: (scale * 120), height: 10)
+                    .frame(width: (CGFloat(badge.progress)/CGFloat(badge.require.count)) * 120, height: 10)
                     .foregroundColor(CustomColor.primary)
             }
             
@@ -148,9 +147,6 @@ struct ItemBadgeLocked: View {
         }
         .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
         .background(.gray.opacity(0.95))
-        .onAppear{
-            scale = CGFloat(badge.progress/badge.require.count)
-        }
     }
 }
 

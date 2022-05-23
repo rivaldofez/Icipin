@@ -118,8 +118,9 @@ struct ItemBadgeLocked: View {
     var geo: GeometryProxy
     var badge: Badge
     
+    
     var body: some View {
-        let scale = Float(badge.progress/badge.require.count)
+        var scale: CGFloat = CGFloat(0)
         VStack{
             Spacer()
             Text("\(badge.progress) / \(badge.require.count)")
@@ -134,7 +135,7 @@ struct ItemBadgeLocked: View {
                     
                 
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .frame(width: CGFloat(scale) * 120, height: 10)
+                    .frame(width: (scale * 120), height: 10)
                     .foregroundColor(CustomColor.primary)
             }
             
@@ -147,6 +148,9 @@ struct ItemBadgeLocked: View {
         }
         .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
         .background(.gray.opacity(0.95))
+        .onAppear{
+            scale = CGFloat(badge.progress/badge.require.count)
+        }
     }
 }
 

@@ -153,7 +153,7 @@ struct ItemQuest: View {
             showDetailQuestPage = true
             selectedQuestItem = questItem
         }){
-            ZStack{
+            ZStack(alignment: .bottomTrailing){
                 VStack{
                     Image(isUnlock ?  questItem.unlockQuest.image : questItem.image)
                         .resizable()
@@ -174,6 +174,12 @@ struct ItemQuest: View {
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 25, trailing: 0))
+                }
+                if(isUnlock){
+                    Image("marked")
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .offset(x: 30)
                 }
             }.frame(width: 130, height: 140)
                 .background(RadialCorners(radGrad: RadialGradient(colors: questItem.color, center: .center, startRadius: 5, endRadius: 100), tl: 20, tt: 20, bl: 20, bt: 40))

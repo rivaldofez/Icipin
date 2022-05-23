@@ -20,7 +20,8 @@ struct QuestPageView: View {
     
     
     var body: some View {
-        let dictQuestPersist = userDefaults.object(forKey: "dictQuest") as! [String: Bool]
+        let dictQuestPersist = isFirstTime ? [String:Bool]() : userDefaults.object(forKey: "dictQuest") as? [String:Bool]
+        
         ZStack{
             Color.white
             VStack {
@@ -119,7 +120,7 @@ struct QuestPageView: View {
                                 ScrollView(.horizontal, showsIndicators: false){
                                     LazyHGrid(rows: rowGrid, spacing: 10){
                                         ForEach(quest.questItem, id: \.id){questItem in
-                                            ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem, dictQuestPersist: dictQuestPersist)
+                                            ItemQuest(showDetailQuestPage: self.$showDetailQuest, selectedQuestItem: self.$selectedQuest,  questItem: questItem, isUnlock: isFirstTime ? false : dictQuestPersist![questItem.labelML]! )
                                         }
                                     }
                                 }
@@ -144,20 +145,17 @@ struct ItemQuest: View {
     @Binding var showDetailQuestPage : Bool
     @Binding var selectedQuestItem : QuestItem
     var questItem: QuestItem
-    var dictQuestPersist: [String:Bool]
-    
+    var isUnlock: Bool
     
     var body: some View {
-        let isUnlock = dictQuestPersist[questItem.labelML]!
-        let titleArr =  questItem.title.components(separatedBy: " ")
-        
+        let titleArr = questItem.title.components(separatedBy: " ")
         Button(action: {
             showDetailQuestPage = true
             selectedQuestItem = questItem
         }){
             ZStack{
                 VStack{
-                    Image(isUnlock ? questItem.unlockQuest.image : questItem.image)
+                    Image(isUnlock ?  questItem.unlockQuest.image : questItem.image)
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(RoundedRectangle(cornerRadius: 20))

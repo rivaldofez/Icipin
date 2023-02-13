@@ -58,7 +58,7 @@ struct BadgePageView: View {
                                         }
                                     }
                                 }
-                                .disabled(!badge.isUnlock)
+//                                .disabled(!badge.isUnlock)
                                 .frame(width: (geo.size.width/2)-40, height: (geo.size.width/2)-40)
                                 .background(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -72,6 +72,7 @@ struct BadgePageView: View {
                         )
                     }
                     .clipped()
+                    
                     
                 }
             }

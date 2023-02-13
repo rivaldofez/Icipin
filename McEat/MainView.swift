@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     let persistenceController = PersistenceController.shared
+    @State var selection: Int = 0
     
     init() {
         UITabBar.appearance().barTintColor = UIColor.red
@@ -16,17 +17,19 @@ struct MainView: View {
     
     var body: some View {
         NavigationView{
-            TabView {
+            TabView(selection: $selection) {
                 QuestPageView()
                     .tabItem{
                         Label("Quest",systemImage: "scroll")
                     }.environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .tag(0)
                 
                 BadgePageView()
                     .tabItem{
                         Label("Badge", systemImage: "star")
                             .background(.red)
                     }
+                    .tag(1)
             }
         }.navigationBarHidden(true)
     }
